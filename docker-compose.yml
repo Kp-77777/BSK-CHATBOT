@@ -6,7 +6,7 @@ services:
     image: mongo:7
     container_name: bsk-mongodb
     ports:
-      - "27017:27017"
+      - "192.168.97.78:27017:27017"
     volumes:
       - bsk_mongodb_data:/data/db
     environment:
@@ -24,7 +24,7 @@ services:
     image: ollama/ollama:latest
     container_name: bsk-ollama
     ports:
-      - "11434:11434"
+      - "192.168.97.78:11434:11434"
     volumes:
       - ollama_data:/root/.ollama
     environment:
@@ -45,7 +45,7 @@ services:
       dockerfile: Dockerfile
     container_name: bsk-app
     ports:
-      - "8000:8000"  # FastAPI
+      - "192.168.97.78:8000:8000"  # FastAPI
     depends_on:
       mongodb:
         condition: service_healthy
@@ -53,11 +53,11 @@ services:
         condition: service_healthy
     environment:
       # MongoDB Configuration
-      MONGODB_URI: mongodb://mongodb:27017
+      MONGODB_URI: mongodb://192.168.97.78:27017
       MONGO_DB_NAME: bsk_assistant
       
       # Ollama Configuration
-      OLLAMA_BASE_URL: http://ollama:11434
+      OLLAMA_BASE_URL: http://192.168.97.78:11434
       
       # Chroma Vector Store (embedded, local)
       CHROMA_PERSIST_DIRECTORY: /app/db/chroma
@@ -90,3 +90,4 @@ volumes:
 networks:
   bsk-network:
     driver: bridge
+
