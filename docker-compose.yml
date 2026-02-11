@@ -6,7 +6,7 @@ services:
     image: mongo:7
     container_name: bsk-mongodb
     ports:
-      - "192.168.97.78:27017:27017"
+      - "27017:27017"
     volumes:
       - bsk_mongodb_data:/data/db
     environment:
@@ -26,13 +26,13 @@ services:
       dockerfile: Dockerfile
     container_name: bsk-app
     ports:
-      - "192.168.97.78:8001:8000"  # FastAPI
+      - "8001:8000"  # FastAPI
     depends_on:
       mongodb:
         condition: service_healthy
     environment:
       # MongoDB Configuration
-      MONGODB_URI: mongodb://192.168.97.78:27017
+      MONGODB_URI: mongodb://mongodb:27017
       MONGO_DB_NAME: bsk_assistant
 
       # Ollama Configuration (running on host VPS, not in Docker)
