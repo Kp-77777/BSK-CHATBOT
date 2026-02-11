@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>BSK Chatbot API – Test Dashboard</title>
+
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1rem;
+      background: #fafafa;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .base-url {
+      text-align: center;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+
+    section {
+      margin-bottom: 2rem;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background: #fff;
+    }
+
+    h2 {
+      margin-top: 0;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 0.3rem;
+    }
+
+    .row {
+      margin: 0.5rem 0;
+    }
+
+    label {
+      display: inline-block;
+      min-width: 100px;
+      font-weight: 500;
+    }
+
+    input, textarea, select, button {
+      padding: 0.4rem 0.6rem;
+      margin: 0.2rem;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    pre {
+      background: #f5f5f5;
+      padding: 0.75rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-size: 0.9rem;
+    }
+
+    .ok { color: green; }
+    .err { color: red; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 0.75rem;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 0.5rem;
+      text-align: left;
+      font-size: 0.9rem;
+    }
+
+    th {
+      background: #f0f0f0;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>BSK Chatbot API – Test & Admin UI</h1>
+<div class="base-url">Base URL: <code>/api/v1</code></div>
+
+<!-- ================= HEALTH ================= -->
+<section>
+  <h2>1. Health</h2>
+  <button onclick="health()">GET /</button>
+  <pre id="healthOut">(click to run)</pre>
+</section>
+
+<!-- ================= CHAT ================= -->
+<section>
+  <h2>2. Chat</h2>
+
+  <div class="row">
+    <button onclick="createChat()">POST /chat</button>
+    <strong id="currentChatId"></strong>
+  </div>
+
+  <div class="row">
+    <label>Query:</label>
+    <input id="chatQuery" size="50" placeholder="Ask something..." />
+    <button onclick="chatQuery()">POST /chat/query</button>
+  </div>
+
+  <div class="row">
+    <label>Chat ID:</label>
+    <input id="getChatId" size="40" placeholder="chat_id" />
+    <button onclick="getChatHistory()">GET /chat/{id}</button>
+  </div>
+
+  <div class="row">
+    <label>Delete ID:</label>
+    <input id="delChatId" size="40" placeholder="chat_id" />
+    <button onclick="deleteChat()">DELETE /chat/{id}</button>
+  </div>
+
+  <pre id="chatOut"></pre>
+</section>
+
+<!-- ================= DOCUMENTS ================= -->
+<section>
+  <h2>3. Documents</h2>
+
+  <button onclick="listDocuments()">GET /documents</button>
+  <pre id="docListOut"></pre>
+
+  <div class="row">
+    <label>PDF:</label>
+    <input type="file" id="docFile" accept=".pdf" />
+  </div>
+
+  <div class="row">
+    <label>Department:</label>
+    <input id="docDept" />
+    <label>Service:</label>
+    <input id="docService" />
+    <label>Type:</label>
+    <input id="docType" />
+  </div>
+
+  <button onclick="uploadDocument()">POST /documents/upload</button>
+
+  <div class="row">
+    <label>Delete File:</label>
+    <input id="docFilename" size="30" />
+    <button onclick="deleteDocument()">DELETE</button>
+  </div>
+
+  <pre id="docOut"></pre>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section>
+  <h2>4. Services</h2>
+
+  <button onclick="listServices()">GET /services</button>
+  <pre id="servicesOut"></pre>
+
+  <div class="row">
+    <label>Department:</label>
+    <input id="svcDept" />
+    <label>Service:</label>
+    <input id="svcService" />
+    <label>Status:</label>
+    <select id="svcStatus">
+      <option>Active</option>
+      <option>Inactive</option>
+    </select>
+    <button onclick="addService()">POST</button>
+  </div>
+
+  <pre id="svcOut"></pre>
+</section>
+
+<!-- ================= DASHBOARD ================= -->
+<section>
+  <h2>5. Dashboard (Overview)</h2>
+
+  <button onclick="loadDashboard()">Refresh Dashboard</button>
+
+  <table id="dashboardTable">
+    <thead>
+      <tr>
+        <th>Department</th>
+        <th>Service</th>
+        <th>Document Count</th>
+        <th>Status</th>
+        <th>Last Updated</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</section>
+
+<!-- ================= LOGS ================= -->
+<section>
+  <h2>6. Logs</h2>
+  <button onclick="getLogs()">GET /logs</button>
+  <pre id="logsOut"></pre>
+</section>
+
+<script>
+  const BASE = '/api/v1';
+
+  function out(id, data, err = false) {
+    const el = document.getElementById(id);
+    el.textContent = typeof data === 'string' ? data : JSON.stringify(data, null, 2);
+    el.className = err ? 'err' : 'ok';
+  }
+
+  async function api(method, path, body, isForm) {
+    const opt = { method, headers: {} };
+    if (body && !isForm) {
+      opt.headers['Content-Type'] = 'application/json';
+      opt.body = JSON.stringify(body);
+    }
+    if (body && isForm) opt.body = body;
+
+    const r = await fetch(BASE + path, opt);
+    const t = await r.text();
+    let d;
+    try { d = JSON.parse(t); } catch { d = t; }
+    return { ok: r.ok, data: d };
+  }
+
+  /* ---- Health ---- */
+  async function health() {
+    const r = await fetch('/');
+    out('healthOut', await r.json(), !r.ok);
+  }
+
+  /* ---- Chat ---- */
+  async function createChat() {
+    const { ok, data } = await api('POST', '/chat');
+    out('chatOut', data, !ok);
+    if (data?.chat_id) syncChatId(data.chat_id);
+  }
+
+  async function chatQuery() {
+    const query = chatQueryEl.value.trim();
+    const chat_id = getChatIdEl.value || null;
+    if (!query) return out('chatOut', 'Enter query', true);
+    const { ok, data } = await api('POST', '/chat/query', { query, chat_id });
+    out('chatOut', data, !ok);
+    if (data?.chat_id) syncChatId(data.chat_id);
+  }
+
+  async function getChatHistory() {
+    const id = getChatIdEl.value.trim();
+    if (!id) return;
+    const { ok, data } = await api('GET', `/chat/${id}`);
+    out('chatOut', data, !ok);
+  }
+
+  async function deleteChat() {
+    const id = delChatIdEl.value.trim();
+    if (!id) return;
+    const { ok, data } = await api('DELETE', `/chat/${id}`);
+    out('chatOut', data, !ok);
+  }
+
+  function syncChatId(id) {
+    currentChatId.textContent = 'Chat ID: ' + id;
+    getChatIdEl.value = delChatIdEl.value = id;
+  }
+
+  /* ---- Documents ---- */
+  async function listDocuments() {
+    const { ok, data } = await api('GET', '/documents');
+    out('docListOut', data, !ok);
+  }
+
+  async function uploadDocument() {
+    const f = docFile.files[0];
+    if (!f) return out('docOut', 'Select PDF', true);
+    const fd = new FormData();
+    fd.append('file', f);
+    fd.append('department', docDept.value);
+    fd.append('service', docService.value);
+    fd.append('doc_type', docType.value);
+    const { ok, data } = await api('POST', '/documents/upload', fd, true);
+    out('docOut', data, !ok);
+  }
+
+  async function deleteDocument() {
+    const fn = docFilename.value.trim();
+    if (!fn) return;
+    const { ok, data } = await api('DELETE', `/documents/${fn}`);
+    out('docOut', data, !ok);
+  }
+
+  /* ---- Services ---- */
+  async function listServices() {
+    const { ok, data } = await api('GET', '/services');
+    out('servicesOut', data, !ok);
+  }
+
+  async function addService() {
+    const { ok, data } = await api('POST', '/services', {
+      department: svcDept.value,
+      service: svcService.value,
+      status: svcStatus.value
+    });
+    out('svcOut', data, !ok);
+  }
+
+  /* ---- Dashboard ---- */
+async function loadDashboard() {
+  const [docsResp, servicesResp] = await Promise.all([
+    api('GET', '/documents'),
+    api('GET', '/services')
+  ]);
+
+  // ✅ Correct extraction
+  const docs = docsResp.data?.documents || [];
+  const services = servicesResp.data?.services || [];
+
+  // Build document count map: department|service → count
+  const docCountMap = {};
+  docs.forEach(d => {
+    if (!d.department || !d.service) return;
+    const key = `${d.department}|${d.service}`;
+    docCountMap[key] = (docCountMap[key] || 0) + 1;
+  });
+
+  // Render dashboard
+  const tbody = dashboardTable.querySelector('tbody');
+  tbody.innerHTML = '';
+
+  services.forEach(s => {
+    if (!s.department || !s.service) return;
+
+    const key = `${s.department}|${s.service}`;
+    const tr = document.createElement('tr');
+
+    tr.innerHTML = `
+      <td>${s.department}</td>
+      <td>${s.service}</td>
+      <td>${docCountMap[key] || 0}</td>
+      <td>${s.status}</td>
+      <td>${s.last_updated || '-'}</td>
+    `;
+
+    tbody.appendChild(tr);
+  });
+
+  // Empty fallback (only if truly empty)
+  if (!services.length) {
+    tbody.innerHTML = `
+      <tr>
+        <td colspan="5" style="text-align:center;color:#777">
+          No services found
+        </td>
+      </tr>
+    `;
+  }
+}
+
+
+  /* ---- Logs ---- */
+  async function getLogs() {
+    const { ok, data } = await api('GET', '/logs');
+    out('logsOut', data, !ok);
+  }
+
+  /* ---- Shortcuts ---- */
+  const chatQueryEl = document.getElementById('chatQuery');
+  const getChatIdEl = document.getElementById('getChatId');
+  const delChatIdEl = document.getElementById('delChatId');
+</script>
+
+</body>
+</html>

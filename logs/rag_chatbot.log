@@ -1,0 +1,1262 @@
+2026-02-06 22:08:13,808 - __main__ - INFO - Initializing BSK Assistant Application...
+2026-02-06 22:08:13,810 - core.initialization - INFO - Initializing BSK Assistant Application...
+2026-02-06 22:08:13,810 - core.initialization - INFO - ============================================================
+2026-02-06 22:08:13,811 - core.initialization - INFO - Starting BSK Assistant Initialization Checks
+2026-02-06 22:08:13,811 - core.initialization - INFO - ============================================================
+2026-02-06 22:08:15,878 - core.initialization - INFO - \u2713 Ollama service is running at http://localhost:11434
+2026-02-06 22:08:17,934 - core.initialization - INFO - \u2713 Chat model 'llama3.1:latest' is available
+2026-02-06 22:08:19,962 - core.initialization - INFO - \u2713 Embedding model 'mxbai-embed-large:latest' is available
+2026-02-06 22:08:19,973 - core.initialization - INFO - ??? MongoDB connection successful (mongodb://localhost:27017)
+2026-02-06 22:08:19,997 - core.initialization - INFO - \u2713 Chroma vector store is available (persist dir: ./db/chroma)
+2026-02-06 22:08:19,997 - core.initialization - INFO - ============================================================
+2026-02-06 22:08:19,997 - core.initialization - INFO - Initialization Check Summary:
+2026-02-06 22:08:19,997 - core.initialization - INFO - ============================================================
+2026-02-06 22:08:19,997 - core.initialization - INFO - \u2713 PASS: ollama_service
+2026-02-06 22:08:19,997 - core.initialization - INFO - \u2713 PASS: chat_model
+2026-02-06 22:08:19,997 - core.initialization - INFO - \u2713 PASS: embedding_model
+2026-02-06 22:08:19,997 - core.initialization - INFO - \u2713 PASS: mongodb
+2026-02-06 22:08:19,997 - core.initialization - INFO - \u2713 PASS: chroma_vectorstore
+2026-02-06 22:08:19,997 - core.initialization - INFO - ============================================================
+2026-02-06 22:08:19,997 - core.initialization - INFO - \u2713 All critical services initialized successfully!
+2026-02-06 22:08:20,083 - __main__ - INFO - Initialized session state with default page: chat
+2026-02-06 22:08:20,085 - ui.pages.chatbot - INFO - Initialized current_chat_id to None
+2026-02-06 22:08:20,085 - ui.pages.chatbot - INFO - Initialized current_chat_messages
+2026-02-06 22:08:20,086 - ui.pages.chatbot - INFO - Initialized pending_new_chat state
+2026-02-06 22:08:20,086 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-06 22:08:38,421 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-06 22:15:25,402 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-06 22:15:29,063 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-06 22:15:29,082 - services.chat_service - INFO - Created new chat with UUID: fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 22:15:29,084 - core.memory_manager - INFO - Created new memory instance for chat: fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 22:15:29,084 - core.memory_manager - INFO - Switched to chat memory: fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 22:15:29,084 - ui.components.chat_interface - INFO - Created new chat with UUID: fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 22:15:29,084 - core.memory_manager - INFO - Switched to chat memory: fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 22:15:29,098 - services.chat_service - INFO - Saved message to chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 22:15:29,100 - services.chat_service - INFO - Updated chat fbb56695-02e6-4172-b26f-dceb266a5f30 title: hi
+2026-02-06 22:15:29,104 - core.rag_engine - INFO - Processing query for chat fbb56695-02e6-4172-b26f-dceb266a5f30: hi
+2026-02-06 22:15:29,105 - core.memory_manager - INFO - Switched to chat memory: fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 22:15:29,107 - core.memory_manager - INFO - Switched to chat memory: fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 22:15:29,107 - core.memory_manager - INFO - Cleared memory for chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 22:15:29,107 - core.memory_manager - INFO - Successfully loaded 0/0 conversation pairs into memory for chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 22:15:29,107 - core.memory_manager - INFO - Switched to chat memory: fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 22:15:59,266 - core.rag_engine - INFO - Filtered documents: 0 \u2192 0 (removed 0)
+2026-02-06 22:15:59,266 - core.rag_engine - INFO - No documents retrieved for query: No conversation history yet, let's start fresh!
+
+Since the original query is just "hi", I'll rewrite it to make it more specific:
+
+"Hello, I'm looking for general information or assistance."
+2026-02-06 22:16:55,580 - core.rag_engine - INFO - Query processed successfully in 86.48s with 1 chunks
+2026-02-06 22:16:55,582 - core.rag_engine - WARNING - Failed to estimate token usage: Could not import transformers python package. This is needed in order to calculate get_token_ids. Please install it with `pip install transformers`.
+2026-02-06 22:16:55,582 - core.memory_manager - INFO - Context saved to chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 22:16:55,582 - core.rag_engine - INFO - Context saved to chat fbb56695-02e6-4172-b26f-dceb266a5f30 memory
+2026-02-06 22:16:55,595 - services.chat_service - INFO - Saved message to chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 22:16:55,595 - ui.components.chat_interface - INFO - Saved assistant response to chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 22:16:55,699 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-06 22:21:02,523 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-06 22:21:34,509 - httpx - INFO - HTTP Request: GET https://chroma-onnx-models.s3.amazonaws.com/all-MiniLM-L6-v2/onnx.tar.gz "HTTP/1.1 200 OK"
+2026-02-06 22:22:37,656 - core.vector_store - ERROR - Error adding documents to Chroma: The read operation timed out in upsert.
+2026-02-06 22:49:27,350 - __main__ - INFO - Initializing BSK Assistant Application...
+2026-02-06 22:49:27,350 - core.initialization - INFO - Initializing BSK Assistant Application...
+2026-02-06 22:49:27,350 - core.initialization - INFO - ============================================================
+2026-02-06 22:49:27,350 - core.initialization - INFO - Starting BSK Assistant Initialization Checks
+2026-02-06 22:49:27,351 - core.initialization - INFO - ============================================================
+2026-02-06 22:49:29,382 - core.initialization - INFO - \u2713 Ollama service is running at http://localhost:11434
+2026-02-06 22:49:31,409 - core.initialization - INFO - \u2713 Chat model 'llama3.1:latest' is available
+2026-02-06 22:49:33,449 - core.initialization - INFO - \u2713 Embedding model 'mxbai-embed-large:latest' is available
+2026-02-06 22:49:33,460 - core.initialization - INFO - ??? MongoDB connection successful (mongodb://localhost:27017)
+2026-02-06 22:49:33,472 - core.initialization - INFO - \u2713 Chroma vector store is available (persist dir: ./db/chroma)
+2026-02-06 22:49:33,472 - core.initialization - INFO - ============================================================
+2026-02-06 22:49:33,472 - core.initialization - INFO - Initialization Check Summary:
+2026-02-06 22:49:33,473 - core.initialization - INFO - ============================================================
+2026-02-06 22:49:33,473 - core.initialization - INFO - \u2713 PASS: ollama_service
+2026-02-06 22:49:33,473 - core.initialization - INFO - \u2713 PASS: chat_model
+2026-02-06 22:49:33,473 - core.initialization - INFO - \u2713 PASS: embedding_model
+2026-02-06 22:49:33,473 - core.initialization - INFO - \u2713 PASS: mongodb
+2026-02-06 22:49:33,473 - core.initialization - INFO - \u2713 PASS: chroma_vectorstore
+2026-02-06 22:49:33,474 - core.initialization - INFO - ============================================================
+2026-02-06 22:49:33,474 - core.initialization - INFO - \u2713 All critical services initialized successfully!
+2026-02-06 22:49:33,556 - __main__ - INFO - Initialized session state with default page: chat
+2026-02-06 22:49:33,557 - ui.pages.chatbot - INFO - Initialized current_chat_id to None
+2026-02-06 22:49:33,558 - ui.pages.chatbot - INFO - Initialized current_chat_messages
+2026-02-06 22:49:33,558 - ui.pages.chatbot - INFO - Initialized pending_new_chat state
+2026-02-06 22:49:33,559 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-06 22:49:38,890 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-06 22:49:38,904 - core.memory_manager - INFO - Created new memory instance for chat: fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 22:49:38,905 - core.memory_manager - INFO - Switched to chat memory: fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 22:49:38,905 - core.memory_manager - INFO - Cleared memory for chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 22:49:38,906 - core.memory_manager - INFO - Context saved to chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 22:49:38,906 - core.memory_manager - INFO - Successfully loaded 1/1 conversation pairs into memory for chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 22:49:38,906 - ui.components.sidebar - INFO - Successfully loaded chat fbb56695... with 2 messages
+2026-02-06 22:49:39,098 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-06 22:49:52,674 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-06 22:50:34,941 - core.vector_store - INFO - \u2713 Added 2 documents to Chroma collection
+2026-02-06 22:50:34,943 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-06 22:50:34,944 - core.vector_operations - INFO - \u2713 Successfully added 2 chunks for aadhaar link ration faq.pdf to Chroma
+2026-02-06 22:50:34,946 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: aadhaar link ration faq.pdf (2 chunks)
+2026-02-06 22:50:34,949 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: aadhaar link ration faq.pdf
+2026-02-06 22:50:34,953 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: Agricultural Marketing Department \u2192 Apply - Application for Farm Produce Transport
+2026-02-06 22:50:34,956 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: aadhaar link ration faq.pdf
+2026-02-06 22:51:24,824 - core.vector_store - INFO - \u2713 Deleted 2 documents from Chroma matching filter: {'filename': 'aadhaar link ration faq.pdf'}
+2026-02-06 22:51:24,825 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-06 22:51:24,825 - core.vector_operations - INFO - \u2713 Deleted all chunks for filename: aadhaar link ration faq.pdf
+2026-02-06 22:53:35,481 - core.memory_manager - INFO - Enhanced Chat Memory Manager initialized.
+2026-02-06 22:53:35,489 - models.embeddings - INFO - Ollama  embeddings initialized successfully (mxbai-embed-large:latest) from http://localhost:11434
+2026-02-06 22:53:35,489 - core.vector_store - INFO - Chroma persist directory ensured: ./db/chroma
+2026-02-06 22:53:35,574 - core.vector_store - INFO - \u2713 Chroma vector store initialized successfully with collection: bsk_documents
+2026-02-06 22:53:35,574 - core.vector_store - INFO -   Persist directory: ./db/chroma
+2026-02-06 22:53:35,574 - models.llm_models - INFO - Ollama Llama 3.1 model initialized successfully from http://localhost:11434
+2026-02-06 22:53:35,575 - models.llm_models - INFO -   Model: llama3.1:latest
+2026-02-06 22:53:35,575 - models.llm_models - INFO -   Temperature: 0.2
+2026-02-06 22:53:35,575 - models.llm_models - INFO -   Streaming: False
+2026-02-06 22:53:35,575 - models.llm_models - INFO -   Context size: 16384
+2026-02-06 22:53:35,576 - core.rag_engine - INFO - Enhanced RAG chain created successfully (streaming optimized).
+2026-02-06 22:53:35,576 - core.rag_engine - INFO - Enhanced RAG chain initialized successfully
+2026-02-06 22:53:35,598 - __main__ - INFO - Initializing BSK Assistant Application...
+2026-02-06 22:53:35,598 - core.initialization - INFO - Initializing BSK Assistant Application...
+2026-02-06 22:53:35,599 - core.initialization - INFO - ============================================================
+2026-02-06 22:53:35,599 - core.initialization - INFO - Starting BSK Assistant Initialization Checks
+2026-02-06 22:53:35,599 - core.initialization - INFO - ============================================================
+2026-02-06 22:53:37,638 - core.initialization - INFO - \u2713 Ollama service is running at http://localhost:11434
+2026-02-06 22:53:39,670 - core.initialization - INFO - \u2713 Chat model 'llama3.1:latest' is available
+2026-02-06 22:53:41,716 - core.initialization - INFO - \u2713 Embedding model 'mxbai-embed-large:latest' is available
+2026-02-06 22:53:41,746 - core.initialization - INFO - ??? MongoDB connection successful (mongodb://localhost:27017)
+2026-02-06 22:53:41,782 - core.initialization - INFO - \u2713 Chroma vector store is available (persist dir: ./db/chroma)
+2026-02-06 22:53:41,782 - core.initialization - INFO - ============================================================
+2026-02-06 22:53:41,783 - core.initialization - INFO - Initialization Check Summary:
+2026-02-06 22:53:41,783 - core.initialization - INFO - ============================================================
+2026-02-06 22:53:41,783 - core.initialization - INFO - \u2713 PASS: ollama_service
+2026-02-06 22:53:41,783 - core.initialization - INFO - \u2713 PASS: chat_model
+2026-02-06 22:53:41,783 - core.initialization - INFO - \u2713 PASS: embedding_model
+2026-02-06 22:53:41,783 - core.initialization - INFO - \u2713 PASS: mongodb
+2026-02-06 22:53:41,783 - core.initialization - INFO - \u2713 PASS: chroma_vectorstore
+2026-02-06 22:53:41,783 - core.initialization - INFO - ============================================================
+2026-02-06 22:53:41,783 - core.initialization - INFO - \u2713 All critical services initialized successfully!
+2026-02-06 22:53:41,785 - __main__ - INFO - Initialized session state with default page: chat
+2026-02-06 22:53:41,785 - ui.pages.chatbot - INFO - Initialized current_chat_id to None
+2026-02-06 22:53:41,786 - ui.pages.chatbot - INFO - Initialized current_chat_messages
+2026-02-06 22:53:41,786 - ui.pages.chatbot - INFO - Initialized pending_new_chat state
+2026-02-06 22:53:41,787 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-06 22:57:15,846 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-06 22:58:27,506 - core.vector_store - INFO - \u2713 Added 2 documents to Chroma collection
+2026-02-06 22:58:27,506 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-06 22:58:27,507 - core.vector_operations - INFO - \u2713 Successfully added 2 chunks for aadhaar link ration faq.pdf to Chroma
+2026-02-06 22:58:27,508 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: aadhaar link ration faq.pdf (2 chunks)
+2026-02-06 22:58:27,512 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: aadhaar link ration faq.pdf
+2026-02-06 22:58:27,515 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: Food & Supplies Department \u2192 Apply - Aadhaar & Mobile Link with Digital Ration Card
+2026-02-06 22:58:27,517 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: aadhaar link ration faq.pdf
+2026-02-06 23:06:39,757 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-06 23:06:43,040 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-06 23:06:43,054 - core.memory_manager - INFO - Created new memory instance for chat: fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:06:43,054 - core.memory_manager - INFO - Switched to chat memory: fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:06:43,055 - core.memory_manager - INFO - Cleared memory for chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:06:43,055 - core.memory_manager - INFO - Context saved to chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:06:43,055 - core.memory_manager - INFO - Successfully loaded 1/1 conversation pairs into memory for chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:06:43,055 - ui.components.sidebar - INFO - Successfully loaded chat fbb56695... with 2 messages
+2026-02-06 23:06:43,241 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-06 23:06:55,641 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-06 23:06:55,660 - core.memory_manager - INFO - Switched to chat memory: fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:06:55,664 - services.chat_service - INFO - Saved message to chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:06:55,668 - core.rag_engine - INFO - Processing query for chat fbb56695-02e6-4172-b26f-dceb266a5f30: ration card link with adhaar
+2026-02-06 23:06:55,668 - core.memory_manager - INFO - Switched to chat memory: fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:06:55,669 - core.memory_manager - INFO - Switched to chat memory: fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:06:55,671 - core.memory_manager - INFO - Cleared memory for chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:06:55,671 - core.memory_manager - INFO - Context saved to chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:06:55,671 - core.memory_manager - INFO - Successfully loaded 1/1 conversation pairs into memory for chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:06:55,671 - core.memory_manager - INFO - Switched to chat memory: fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:07:22,961 - core.rag_engine - INFO - Filtered documents: 2 \u2192 0 (removed 2)
+2026-02-06 23:07:22,961 - core.rag_engine - INFO - No documents retrieved for query: Ration card linking process with Aadhaar number.
+2026-02-06 23:08:22,290 - core.rag_engine - INFO - Query processed successfully in 86.62s with 1 chunks
+2026-02-06 23:08:22,292 - core.rag_engine - WARNING - Failed to estimate token usage: Could not import transformers python package. This is needed in order to calculate get_token_ids. Please install it with `pip install transformers`.
+2026-02-06 23:08:22,292 - core.memory_manager - INFO - Context saved to chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:08:22,293 - core.rag_engine - INFO - Context saved to chat fbb56695-02e6-4172-b26f-dceb266a5f30 memory
+2026-02-06 23:08:22,296 - services.chat_service - INFO - Saved message to chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:08:22,297 - ui.components.chat_interface - INFO - Saved assistant response to chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:08:22,415 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-06 23:15:33,949 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-06 23:18:23,887 - core.memory_manager - INFO - Enhanced Chat Memory Manager initialized.
+2026-02-06 23:18:23,899 - models.embeddings - INFO - Ollama  embeddings initialized successfully (mxbai-embed-large:latest) from http://localhost:11434
+2026-02-06 23:18:23,900 - core.vector_store - INFO - Chroma persist directory ensured: ./db/chroma
+2026-02-06 23:18:24,016 - core.vector_store - INFO - \u2713 Chroma vector store initialized successfully with collection: bsk_documents
+2026-02-06 23:18:24,017 - core.vector_store - INFO -   Persist directory: ./db/chroma
+2026-02-06 23:18:24,017 - models.llm_models - INFO - Ollama Llama 3.1 model initialized successfully from http://localhost:11434
+2026-02-06 23:18:24,018 - models.llm_models - INFO -   Model: llama3.1:latest
+2026-02-06 23:18:24,018 - models.llm_models - INFO -   Temperature: 0.2
+2026-02-06 23:18:24,018 - models.llm_models - INFO -   Streaming: False
+2026-02-06 23:18:24,018 - models.llm_models - INFO -   Context size: 16384
+2026-02-06 23:18:24,019 - core.rag_engine - INFO - Enhanced RAG chain created successfully (streaming optimized).
+2026-02-06 23:18:24,020 - core.rag_engine - INFO - Enhanced RAG chain initialized successfully
+2026-02-06 23:18:24,205 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-06 23:18:40,050 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-06 23:18:40,073 - core.memory_manager - INFO - Created new memory instance for chat: fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:18:40,073 - core.memory_manager - INFO - Switched to chat memory: fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:18:40,077 - services.chat_service - INFO - Saved message to chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:18:40,081 - core.rag_engine - INFO - Processing query for chat fbb56695-02e6-4172-b26f-dceb266a5f30: redressal in bsk
+2026-02-06 23:18:40,082 - core.memory_manager - INFO - Switched to chat memory: fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:18:40,083 - core.memory_manager - INFO - Switched to chat memory: fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:18:40,084 - core.memory_manager - INFO - Cleared memory for chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:18:40,084 - core.memory_manager - WARNING - Invalid message pair at index 4 for chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:18:40,084 - core.memory_manager - INFO - Context saved to chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:18:40,085 - core.memory_manager - INFO - Context saved to chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:18:40,085 - core.memory_manager - INFO - Successfully loaded 2/2 conversation pairs into memory for chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:18:40,085 - core.memory_manager - INFO - Switched to chat memory: fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:18:50,435 - core.rag_engine - INFO - Filtered documents: 2 \u2192 2 (removed 0)
+2026-02-06 23:18:50,436 - core.rag_engine - INFO - Processing 2 retrieved documents for chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:21:59,009 - __main__ - INFO - Initializing BSK Assistant Application...
+2026-02-06 23:21:59,009 - core.initialization - INFO - Initializing BSK Assistant Application...
+2026-02-06 23:21:59,009 - core.initialization - INFO - ============================================================
+2026-02-06 23:21:59,009 - core.initialization - INFO - Starting BSK Assistant Initialization Checks
+2026-02-06 23:21:59,009 - core.initialization - INFO - ============================================================
+2026-02-06 23:22:01,060 - core.initialization - INFO - \u2713 Ollama service is running at http://localhost:11434
+2026-02-06 23:22:03,119 - core.initialization - INFO - \u2713 Chat model 'llama3.1:latest' is available
+2026-02-06 23:22:05,178 - core.initialization - INFO - \u2713 Embedding model 'mxbai-embed-large:latest' is available
+2026-02-06 23:22:05,198 - core.initialization - INFO - ??? MongoDB connection successful (mongodb://localhost:27017)
+2026-02-06 23:22:05,209 - core.initialization - INFO - \u2713 Chroma vector store is available (persist dir: ./db/chroma)
+2026-02-06 23:22:05,209 - core.initialization - INFO - ============================================================
+2026-02-06 23:22:05,209 - core.initialization - INFO - Initialization Check Summary:
+2026-02-06 23:22:05,209 - core.initialization - INFO - ============================================================
+2026-02-06 23:22:05,210 - core.initialization - INFO - \u2713 PASS: ollama_service
+2026-02-06 23:22:05,210 - core.initialization - INFO - \u2713 PASS: chat_model
+2026-02-06 23:22:05,210 - core.initialization - INFO - \u2713 PASS: embedding_model
+2026-02-06 23:22:05,210 - core.initialization - INFO - \u2713 PASS: mongodb
+2026-02-06 23:22:05,210 - core.initialization - INFO - \u2713 PASS: chroma_vectorstore
+2026-02-06 23:22:05,210 - core.initialization - INFO - ============================================================
+2026-02-06 23:22:05,211 - core.initialization - INFO - \u2713 All critical services initialized successfully!
+2026-02-06 23:22:05,327 - __main__ - INFO - Initialized session state with default page: chat
+2026-02-06 23:22:05,328 - ui.pages.chatbot - INFO - Initialized current_chat_id to None
+2026-02-06 23:22:05,328 - ui.pages.chatbot - INFO - Initialized current_chat_messages
+2026-02-06 23:22:05,329 - ui.pages.chatbot - INFO - Initialized pending_new_chat state
+2026-02-06 23:22:05,330 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-06 23:22:13,605 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-06 23:22:13,621 - core.memory_manager - INFO - Created new memory instance for chat: fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:22:13,621 - core.memory_manager - INFO - Switched to chat memory: fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:22:13,621 - core.memory_manager - INFO - Cleared memory for chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:22:13,622 - core.memory_manager - WARNING - Invalid message pair at index 4 for chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:22:13,622 - core.memory_manager - INFO - Context saved to chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:22:13,622 - core.memory_manager - INFO - Context saved to chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:22:13,622 - core.memory_manager - INFO - Successfully loaded 2/2 conversation pairs into memory for chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:22:13,622 - ui.components.sidebar - INFO - Successfully loaded chat fbb56695... with 7 messages
+2026-02-06 23:22:13,752 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-06 23:24:21,800 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-06 23:24:21,823 - core.memory_manager - INFO - Switched to chat memory: fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:24:21,837 - services.chat_service - INFO - Saved message to chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:24:21,842 - core.rag_engine - INFO - Processing query for chat fbb56695-02e6-4172-b26f-dceb266a5f30: adhaar and ration cad link
+2026-02-06 23:24:21,842 - core.memory_manager - INFO - Switched to chat memory: fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:24:21,845 - core.memory_manager - INFO - Switched to chat memory: fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:24:21,845 - core.memory_manager - INFO - Cleared memory for chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:24:21,845 - core.memory_manager - WARNING - Invalid message pair at index 4 for chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:24:21,846 - core.memory_manager - WARNING - Invalid message pair at index 6 for chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:24:21,846 - core.memory_manager - INFO - Context saved to chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:24:21,846 - core.memory_manager - INFO - Context saved to chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:24:21,847 - core.memory_manager - INFO - Successfully loaded 2/2 conversation pairs into memory for chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:24:21,847 - core.memory_manager - INFO - Switched to chat memory: fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:24:41,828 - core.rag_engine - INFO - Processing 4 retrieved documents for chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:27:31,722 - core.rag_engine - INFO - Query processed successfully in 189.88s with 1 chunks
+2026-02-06 23:27:31,725 - core.rag_engine - WARNING - Failed to estimate token usage: Could not import transformers python package. This is needed in order to calculate get_token_ids. Please install it with `pip install transformers`.
+2026-02-06 23:27:31,725 - core.memory_manager - INFO - Context saved to chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:27:31,725 - core.rag_engine - INFO - Context saved to chat fbb56695-02e6-4172-b26f-dceb266a5f30 memory
+2026-02-06 23:27:31,738 - services.chat_service - INFO - Saved message to chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:27:31,739 - ui.components.chat_interface - INFO - Saved assistant response to chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-06 23:27:31,866 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-06 23:28:12,749 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-06 23:29:47,045 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-07 00:27:34,916 - __main__ - INFO - Initializing BSK Assistant Application...
+2026-02-07 00:27:34,918 - core.initialization - INFO - Initializing BSK Assistant Application...
+2026-02-07 00:27:34,918 - core.initialization - INFO - ============================================================
+2026-02-07 00:27:34,918 - core.initialization - INFO - Starting BSK Assistant Initialization Checks
+2026-02-07 00:27:34,918 - core.initialization - INFO - ============================================================
+2026-02-07 00:27:37,003 - core.initialization - INFO - \u2713 Ollama service is running at http://localhost:11434
+2026-02-07 00:27:39,062 - core.initialization - INFO - \u2713 Chat model 'llama3.1:latest' is available
+2026-02-07 00:27:41,111 - core.initialization - INFO - \u2713 Embedding model 'mxbai-embed-large:latest' is available
+2026-02-07 00:27:41,140 - core.initialization - INFO - ??? MongoDB connection successful (mongodb://localhost:27017)
+2026-02-07 00:27:41,158 - core.initialization - INFO - \u2713 Chroma vector store is available (persist dir: ./db/chroma)
+2026-02-07 00:27:41,158 - core.initialization - INFO - ============================================================
+2026-02-07 00:27:41,158 - core.initialization - INFO - Initialization Check Summary:
+2026-02-07 00:27:41,158 - core.initialization - INFO - ============================================================
+2026-02-07 00:27:41,158 - core.initialization - INFO - \u2713 PASS: ollama_service
+2026-02-07 00:27:41,158 - core.initialization - INFO - \u2713 PASS: chat_model
+2026-02-07 00:27:41,158 - core.initialization - INFO - \u2713 PASS: embedding_model
+2026-02-07 00:27:41,158 - core.initialization - INFO - \u2713 PASS: mongodb
+2026-02-07 00:27:41,158 - core.initialization - INFO - \u2713 PASS: chroma_vectorstore
+2026-02-07 00:27:41,158 - core.initialization - INFO - ============================================================
+2026-02-07 00:27:41,158 - core.initialization - INFO - \u2713 All critical services initialized successfully!
+2026-02-07 00:27:41,199 - __main__ - INFO - Initialized session state with default page: chat
+2026-02-07 00:27:41,200 - ui.pages.chatbot - INFO - Initialized current_chat_id to None
+2026-02-07 00:27:41,200 - ui.pages.chatbot - INFO - Initialized current_chat_messages
+2026-02-07 00:27:41,200 - ui.pages.chatbot - INFO - Initialized pending_new_chat state
+2026-02-07 00:27:41,201 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-07 00:32:53,407 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-07 00:33:23,365 - __main__ - INFO - Initializing BSK Assistant Application...
+2026-02-07 00:33:23,365 - core.initialization - INFO - Initializing BSK Assistant Application...
+2026-02-07 00:33:23,365 - core.initialization - INFO - ============================================================
+2026-02-07 00:33:23,365 - core.initialization - INFO - Starting BSK Assistant Initialization Checks
+2026-02-07 00:33:23,365 - core.initialization - INFO - ============================================================
+2026-02-07 00:33:25,429 - core.initialization - INFO - \u2713 Ollama service is running at http://localhost:11434
+2026-02-07 00:33:27,487 - core.initialization - INFO - \u2713 Chat model 'llama3.1:latest' is available
+2026-02-07 00:33:29,575 - core.initialization - INFO - \u2713 Embedding model 'mxbai-embed-large:latest' is available
+2026-02-07 00:33:29,603 - core.initialization - INFO - ??? MongoDB connection successful (mongodb://localhost:27017)
+2026-02-07 00:33:29,623 - core.initialization - INFO - \u2713 Chroma vector store is available (persist dir: ./db/chroma)
+2026-02-07 00:33:29,623 - core.initialization - INFO - ============================================================
+2026-02-07 00:33:29,623 - core.initialization - INFO - Initialization Check Summary:
+2026-02-07 00:33:29,623 - core.initialization - INFO - ============================================================
+2026-02-07 00:33:29,623 - core.initialization - INFO - \u2713 PASS: ollama_service
+2026-02-07 00:33:29,623 - core.initialization - INFO - \u2713 PASS: chat_model
+2026-02-07 00:33:29,623 - core.initialization - INFO - \u2713 PASS: embedding_model
+2026-02-07 00:33:29,623 - core.initialization - INFO - \u2713 PASS: mongodb
+2026-02-07 00:33:29,623 - core.initialization - INFO - \u2713 PASS: chroma_vectorstore
+2026-02-07 00:33:29,623 - core.initialization - INFO - ============================================================
+2026-02-07 00:33:29,623 - core.initialization - INFO - \u2713 All critical services initialized successfully!
+2026-02-07 00:33:29,624 - __main__ - INFO - Initialized session state with default page: chat
+2026-02-07 00:33:29,624 - ui.pages.chatbot - INFO - Initialized current_chat_id to None
+2026-02-07 00:33:29,624 - ui.pages.chatbot - INFO - Initialized current_chat_messages
+2026-02-07 00:33:29,624 - ui.pages.chatbot - INFO - Initialized pending_new_chat state
+2026-02-07 00:33:29,624 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-07 00:45:56,577 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-07 00:45:56,604 - core.memory_manager - INFO - Created new memory instance for chat: fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-07 00:45:56,604 - core.memory_manager - INFO - Switched to chat memory: fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-07 00:45:56,605 - core.memory_manager - INFO - Cleared memory for chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-07 00:45:56,605 - core.memory_manager - WARNING - Invalid message pair at index 4 for chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-07 00:45:56,605 - core.memory_manager - WARNING - Invalid message pair at index 6 for chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-07 00:45:56,605 - core.memory_manager - INFO - Context saved to chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-07 00:45:56,605 - core.memory_manager - INFO - Context saved to chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-07 00:45:56,605 - core.memory_manager - INFO - Successfully loaded 2/2 conversation pairs into memory for chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-07 00:45:56,605 - ui.components.sidebar - INFO - Successfully loaded chat fbb56695... with 9 messages
+2026-02-07 00:45:56,675 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-07 00:46:00,157 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-07 00:50:18,958 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-07 00:52:25,714 - __main__ - INFO - Initializing BSK Assistant Application...
+2026-02-07 00:52:25,714 - core.initialization - INFO - Initializing BSK Assistant Application...
+2026-02-07 00:52:25,714 - core.initialization - INFO - ============================================================
+2026-02-07 00:52:25,714 - core.initialization - INFO - Starting BSK Assistant Initialization Checks
+2026-02-07 00:52:25,714 - core.initialization - INFO - ============================================================
+2026-02-07 00:52:27,759 - core.initialization - INFO - \u2713 Ollama service is running at http://localhost:11434
+2026-02-07 00:52:29,806 - core.initialization - INFO - \u2713 Chat model 'llama3.1:latest' is available
+2026-02-07 00:52:31,868 - core.initialization - INFO - \u2713 Embedding model 'mxbai-embed-large:latest' is available
+2026-02-07 00:52:31,901 - core.initialization - INFO - ??? MongoDB connection successful (mongodb://localhost:27017)
+2026-02-07 00:52:31,932 - core.initialization - INFO - \u2713 Chroma vector store is available (persist dir: ./db/chroma)
+2026-02-07 00:52:31,932 - core.initialization - INFO - ============================================================
+2026-02-07 00:52:31,932 - core.initialization - INFO - Initialization Check Summary:
+2026-02-07 00:52:31,932 - core.initialization - INFO - ============================================================
+2026-02-07 00:52:31,932 - core.initialization - INFO - \u2713 PASS: ollama_service
+2026-02-07 00:52:31,932 - core.initialization - INFO - \u2713 PASS: chat_model
+2026-02-07 00:52:31,932 - core.initialization - INFO - \u2713 PASS: embedding_model
+2026-02-07 00:52:31,932 - core.initialization - INFO - \u2713 PASS: mongodb
+2026-02-07 00:52:31,932 - core.initialization - INFO - \u2713 PASS: chroma_vectorstore
+2026-02-07 00:52:31,932 - core.initialization - INFO - ============================================================
+2026-02-07 00:52:31,932 - core.initialization - INFO - \u2713 All critical services initialized successfully!
+2026-02-07 00:52:31,967 - __main__ - INFO - Initialized session state with default page: chat
+2026-02-07 00:52:31,968 - ui.pages.chatbot - INFO - Initialized current_chat_id to None
+2026-02-07 00:52:31,968 - ui.pages.chatbot - INFO - Initialized current_chat_messages
+2026-02-07 00:52:31,968 - ui.pages.chatbot - INFO - Initialized pending_new_chat state
+2026-02-07 00:52:31,969 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-07 00:52:35,629 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-07 00:52:35,635 - core.memory_manager - INFO - Created new memory instance for chat: fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-07 00:52:35,636 - core.memory_manager - INFO - Switched to chat memory: fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-07 00:52:35,636 - core.memory_manager - INFO - Cleared memory for chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-07 00:52:35,636 - core.memory_manager - WARNING - Invalid message pair at index 4 for chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-07 00:52:35,636 - core.memory_manager - WARNING - Invalid message pair at index 6 for chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-07 00:52:35,636 - core.memory_manager - WARNING - Invalid message pair at index 8 for chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-07 00:52:35,636 - core.memory_manager - INFO - Context saved to chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-07 00:52:35,636 - core.memory_manager - INFO - Context saved to chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-07 00:52:35,636 - core.memory_manager - INFO - Successfully loaded 2/2 conversation pairs into memory for chat fbb56695-02e6-4172-b26f-dceb266a5f30
+2026-02-07 00:52:35,637 - ui.components.sidebar - INFO - Successfully loaded chat fbb56695... with 11 messages
+2026-02-07 00:52:35,710 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-07 00:52:58,447 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-07 00:54:57,191 - __main__ - INFO - Initializing BSK Assistant Application...
+2026-02-07 00:54:57,191 - core.initialization - INFO - Initializing BSK Assistant Application...
+2026-02-07 00:54:57,191 - core.initialization - INFO - ============================================================
+2026-02-07 00:54:57,191 - core.initialization - INFO - Starting BSK Assistant Initialization Checks
+2026-02-07 00:54:57,191 - core.initialization - INFO - ============================================================
+2026-02-07 00:54:59,250 - core.initialization - INFO - \u2713 Ollama service is running at http://localhost:11434
+2026-02-07 00:55:01,295 - core.initialization - INFO - \u2713 Chat model 'llama3.1:latest' is available
+2026-02-07 00:55:03,352 - core.initialization - INFO - \u2713 Embedding model 'mxbai-embed-large:latest' is available
+2026-02-07 00:55:03,358 - core.initialization - INFO - ??? MongoDB connection successful (mongodb://localhost:27017)
+2026-02-07 00:55:03,362 - core.initialization - INFO - \u2713 Chroma vector store is available (persist dir: ./db/chroma)
+2026-02-07 00:55:03,363 - core.initialization - INFO - ============================================================
+2026-02-07 00:55:03,363 - core.initialization - INFO - Initialization Check Summary:
+2026-02-07 00:55:03,363 - core.initialization - INFO - ============================================================
+2026-02-07 00:55:03,363 - core.initialization - INFO - \u2713 PASS: ollama_service
+2026-02-07 00:55:03,363 - core.initialization - INFO - \u2713 PASS: chat_model
+2026-02-07 00:55:03,363 - core.initialization - INFO - \u2713 PASS: embedding_model
+2026-02-07 00:55:03,363 - core.initialization - INFO - \u2713 PASS: mongodb
+2026-02-07 00:55:03,363 - core.initialization - INFO - \u2713 PASS: chroma_vectorstore
+2026-02-07 00:55:03,363 - core.initialization - INFO - ============================================================
+2026-02-07 00:55:03,363 - core.initialization - INFO - \u2713 All critical services initialized successfully!
+2026-02-07 00:55:03,363 - __main__ - INFO - Initialized session state with default page: chat
+2026-02-07 00:55:03,364 - ui.pages.chatbot - INFO - Initialized current_chat_id to None
+2026-02-07 00:55:03,364 - ui.pages.chatbot - INFO - Initialized current_chat_messages
+2026-02-07 00:55:03,364 - ui.pages.chatbot - INFO - Initialized pending_new_chat state
+2026-02-07 00:55:03,364 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-07 00:55:06,529 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-07 00:55:14,402 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-07 00:55:23,554 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-07 00:55:23,581 - services.chat_service - INFO - Created new chat with UUID: 4581af9a-f2b4-47e6-b7ef-6c751c706e8b
+2026-02-07 00:55:23,581 - core.memory_manager - INFO - Created new memory instance for chat: 4581af9a-f2b4-47e6-b7ef-6c751c706e8b
+2026-02-07 00:55:23,581 - core.memory_manager - INFO - Switched to chat memory: 4581af9a-f2b4-47e6-b7ef-6c751c706e8b
+2026-02-07 00:55:23,581 - ui.components.chat_interface - INFO - Created new chat with UUID: 4581af9a-f2b4-47e6-b7ef-6c751c706e8b
+2026-02-07 00:55:23,582 - core.memory_manager - INFO - Switched to chat memory: 4581af9a-f2b4-47e6-b7ef-6c751c706e8b
+2026-02-07 00:55:23,583 - services.chat_service - INFO - Saved message to chat 4581af9a-f2b4-47e6-b7ef-6c751c706e8b
+2026-02-07 00:55:23,583 - services.chat_service - INFO - Updated chat 4581af9a-f2b4-47e6-b7ef-6c751c706e8b title: rti redressal
+2026-02-07 00:55:23,585 - core.rag_engine - INFO - Processing query for chat 4581af9a-f2b4-47e6-b7ef-6c751c706e8b: rti redressal
+2026-02-07 00:55:23,585 - core.memory_manager - INFO - Switched to chat memory: 4581af9a-f2b4-47e6-b7ef-6c751c706e8b
+2026-02-07 00:55:23,586 - core.memory_manager - INFO - Switched to chat memory: 4581af9a-f2b4-47e6-b7ef-6c751c706e8b
+2026-02-07 00:55:23,586 - core.memory_manager - INFO - Cleared memory for chat 4581af9a-f2b4-47e6-b7ef-6c751c706e8b
+2026-02-07 00:55:23,586 - core.memory_manager - INFO - Successfully loaded 0/0 conversation pairs into memory for chat 4581af9a-f2b4-47e6-b7ef-6c751c706e8b
+2026-02-07 00:55:23,586 - core.memory_manager - INFO - Switched to chat memory: 4581af9a-f2b4-47e6-b7ef-6c751c706e8b
+2026-02-07 00:55:35,920 - core.rag_engine - INFO - Processing 4 retrieved documents for chat 4581af9a-f2b4-47e6-b7ef-6c751c706e8b
+2026-02-07 00:55:35,920 - core.rag_engine - ERROR - Error in enhanced context retrieval: 'NoneType' object has no attribute 'get'
+2026-02-07 00:56:06,473 - core.rag_engine - INFO - Query processed successfully in 42.89s with 1 chunks
+2026-02-07 00:56:06,474 - core.rag_engine - WARNING - Failed to estimate token usage: Could not import transformers python package. This is needed in order to calculate get_token_ids. Please install it with `pip install transformers`.
+2026-02-07 00:56:06,474 - core.memory_manager - INFO - Context saved to chat 4581af9a-f2b4-47e6-b7ef-6c751c706e8b
+2026-02-07 00:56:06,474 - core.rag_engine - INFO - Context saved to chat 4581af9a-f2b4-47e6-b7ef-6c751c706e8b memory
+2026-02-07 00:56:06,476 - services.chat_service - INFO - Saved message to chat 4581af9a-f2b4-47e6-b7ef-6c751c706e8b
+2026-02-07 00:56:06,476 - ui.components.chat_interface - INFO - Saved assistant response to chat 4581af9a-f2b4-47e6-b7ef-6c751c706e8b
+2026-02-07 00:56:06,548 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-07 01:41:37,037 - core.memory_manager - INFO - Enhanced Chat Memory Manager initialized.
+2026-02-07 01:41:37,046 - models.embeddings - INFO - Ollama  embeddings initialized successfully (mxbai-embed-large:latest) from http://localhost:11434
+2026-02-07 01:41:37,046 - core.vector_store - INFO - Chroma persist directory ensured: ./db/chroma
+2026-02-07 01:41:37,098 - core.vector_store - INFO - \u2713 Chroma vector store initialized successfully with collection: bsk_documents
+2026-02-07 01:41:37,098 - core.vector_store - INFO -   Persist directory: ./db/chroma
+2026-02-07 01:41:37,099 - models.llm_models - INFO - Ollama Llama 3.1 model initialized successfully from http://localhost:11434
+2026-02-07 01:41:37,099 - models.llm_models - INFO -   Model: llama3.1:latest
+2026-02-07 01:41:37,099 - models.llm_models - INFO -   Temperature: 0.2
+2026-02-07 01:41:37,099 - models.llm_models - INFO -   Streaming: False
+2026-02-07 01:41:37,099 - models.llm_models - INFO -   Context size: 16384
+2026-02-07 01:41:37,100 - core.rag_engine - INFO - Enhanced RAG chain created successfully (streaming optimized).
+2026-02-07 01:41:37,100 - core.rag_engine - INFO - Enhanced RAG chain initialized successfully
+2026-02-07 01:41:37,109 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-07 01:43:19,381 - core.vector_store - INFO - \u2713 Added 1 documents to Chroma collection
+2026-02-07 01:43:19,381 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-07 01:43:19,381 - core.vector_operations - INFO - \u2713 Successfully added 1 chunks for Apply - Permission for Delayed Registration of Birth.pdf to Chroma
+2026-02-07 01:43:19,382 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Apply - Permission for Delayed Registration of Birth.pdf (1 chunks)
+2026-02-07 01:43:19,383 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Apply - Permission for Delayed Registration of Birth.pdf
+2026-02-07 01:43:19,385 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: Health & Family Welfare Department \u2192 Apply - Permission for Delayed Registration of Birth
+2026-02-07 01:43:19,385 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Apply - Permission for Delayed Registration of Birth.pdf
+2026-02-07 01:43:58,082 - core.vector_store - INFO - \u2713 Added 1 documents to Chroma collection
+2026-02-07 01:43:58,082 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-07 01:43:58,082 - core.vector_operations - INFO - \u2713 Successfully added 1 chunks for Apply - Permission for Delayed Registration of DEATH.pdf to Chroma
+2026-02-07 01:43:58,083 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Apply - Permission for Delayed Registration of DEATH.pdf (1 chunks)
+2026-02-07 01:43:58,084 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Apply - Permission for Delayed Registration of DEATH.pdf
+2026-02-07 01:43:58,085 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: Health & Family Welfare Department \u2192 Apply - Download and Print Death Certificate
+2026-02-07 01:43:58,086 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Apply - Permission for Delayed Registration of DEATH.pdf
+2026-02-07 01:45:27,507 - __main__ - INFO - Initializing BSK Assistant Application...
+2026-02-07 01:45:27,507 - core.initialization - INFO - Initializing BSK Assistant Application...
+2026-02-07 01:45:27,509 - core.initialization - INFO - ============================================================
+2026-02-07 01:45:27,509 - core.initialization - INFO - Starting BSK Assistant Initialization Checks
+2026-02-07 01:45:27,509 - core.initialization - INFO - ============================================================
+2026-02-07 01:45:29,553 - core.initialization - INFO - \u2713 Ollama service is running at http://localhost:11434
+2026-02-07 01:45:31,573 - core.initialization - INFO - \u2713 Chat model 'llama3.1:latest' is available
+2026-02-07 01:45:33,623 - core.initialization - INFO - \u2713 Embedding model 'mxbai-embed-large:latest' is available
+2026-02-07 01:45:33,627 - core.initialization - INFO - ??? MongoDB connection successful (mongodb://localhost:27017)
+2026-02-07 01:45:33,654 - core.initialization - INFO - \u2713 Chroma vector store is available (persist dir: ./db/chroma)
+2026-02-07 01:45:33,654 - core.initialization - INFO - ============================================================
+2026-02-07 01:45:33,654 - core.initialization - INFO - Initialization Check Summary:
+2026-02-07 01:45:33,654 - core.initialization - INFO - ============================================================
+2026-02-07 01:45:33,654 - core.initialization - INFO - \u2713 PASS: ollama_service
+2026-02-07 01:45:33,654 - core.initialization - INFO - \u2713 PASS: chat_model
+2026-02-07 01:45:33,654 - core.initialization - INFO - \u2713 PASS: embedding_model
+2026-02-07 01:45:33,654 - core.initialization - INFO - \u2713 PASS: mongodb
+2026-02-07 01:45:33,654 - core.initialization - INFO - \u2713 PASS: chroma_vectorstore
+2026-02-07 01:45:33,654 - core.initialization - INFO - ============================================================
+2026-02-07 01:45:33,654 - core.initialization - INFO - \u2713 All critical services initialized successfully!
+2026-02-07 01:45:33,655 - __main__ - INFO - Initialized session state with default page: chat
+2026-02-07 01:45:33,655 - ui.pages.chatbot - INFO - Initialized current_chat_id to None
+2026-02-07 01:45:33,655 - ui.pages.chatbot - INFO - Initialized current_chat_messages
+2026-02-07 01:45:33,655 - ui.pages.chatbot - INFO - Initialized pending_new_chat state
+2026-02-07 01:45:33,655 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-07 01:45:37,358 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-07 01:45:37,365 - core.memory_manager - INFO - Created new memory instance for chat: 4581af9a-f2b4-47e6-b7ef-6c751c706e8b
+2026-02-07 01:45:37,365 - core.memory_manager - INFO - Switched to chat memory: 4581af9a-f2b4-47e6-b7ef-6c751c706e8b
+2026-02-07 01:45:37,366 - core.memory_manager - INFO - Cleared memory for chat 4581af9a-f2b4-47e6-b7ef-6c751c706e8b
+2026-02-07 01:45:37,366 - core.memory_manager - INFO - Context saved to chat 4581af9a-f2b4-47e6-b7ef-6c751c706e8b
+2026-02-07 01:45:37,366 - core.memory_manager - INFO - Successfully loaded 1/1 conversation pairs into memory for chat 4581af9a-f2b4-47e6-b7ef-6c751c706e8b
+2026-02-07 01:45:37,366 - ui.components.sidebar - INFO - Successfully loaded chat 4581af9a... with 2 messages
+2026-02-07 01:45:37,442 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-07 01:49:32,310 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-07 01:49:32,319 - core.memory_manager - INFO - Switched to chat memory: 4581af9a-f2b4-47e6-b7ef-6c751c706e8b
+2026-02-07 01:49:32,322 - services.chat_service - INFO - Saved message to chat 4581af9a-f2b4-47e6-b7ef-6c751c706e8b
+2026-02-07 01:49:32,323 - core.rag_engine - INFO - Processing query for chat 4581af9a-f2b4-47e6-b7ef-6c751c706e8b: permission of birth
+2026-02-07 01:49:32,323 - core.memory_manager - INFO - Switched to chat memory: 4581af9a-f2b4-47e6-b7ef-6c751c706e8b
+2026-02-07 01:49:32,323 - core.memory_manager - INFO - Switched to chat memory: 4581af9a-f2b4-47e6-b7ef-6c751c706e8b
+2026-02-07 01:49:32,324 - core.memory_manager - INFO - Cleared memory for chat 4581af9a-f2b4-47e6-b7ef-6c751c706e8b
+2026-02-07 01:49:32,324 - core.memory_manager - INFO - Context saved to chat 4581af9a-f2b4-47e6-b7ef-6c751c706e8b
+2026-02-07 01:49:32,324 - core.memory_manager - INFO - Successfully loaded 1/1 conversation pairs into memory for chat 4581af9a-f2b4-47e6-b7ef-6c751c706e8b
+2026-02-07 01:49:32,324 - core.memory_manager - INFO - Switched to chat memory: 4581af9a-f2b4-47e6-b7ef-6c751c706e8b
+2026-02-07 01:49:41,996 - core.rag_engine - INFO - Processing 4 retrieved documents for chat 4581af9a-f2b4-47e6-b7ef-6c751c706e8b
+2026-02-07 01:50:55,751 - core.rag_engine - INFO - Query processed successfully in 83.43s with 1 chunks
+2026-02-07 01:50:55,752 - core.rag_engine - WARNING - Failed to estimate token usage: Could not import transformers python package. This is needed in order to calculate get_token_ids. Please install it with `pip install transformers`.
+2026-02-07 01:50:55,753 - core.memory_manager - INFO - Context saved to chat 4581af9a-f2b4-47e6-b7ef-6c751c706e8b
+2026-02-07 01:50:55,753 - core.rag_engine - INFO - Context saved to chat 4581af9a-f2b4-47e6-b7ef-6c751c706e8b memory
+2026-02-07 01:50:55,755 - services.chat_service - INFO - Saved message to chat 4581af9a-f2b4-47e6-b7ef-6c751c706e8b
+2026-02-07 01:50:55,755 - ui.components.chat_interface - INFO - Saved assistant response to chat 4581af9a-f2b4-47e6-b7ef-6c751c706e8b
+2026-02-07 01:50:55,835 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-07 02:45:44,178 - __main__ - INFO - Initializing BSK Assistant Application...
+2026-02-07 02:45:44,178 - core.initialization - INFO - Initializing BSK Assistant Application...
+2026-02-07 02:45:44,178 - core.initialization - INFO - ============================================================
+2026-02-07 02:45:44,178 - core.initialization - INFO - Starting BSK Assistant Initialization Checks
+2026-02-07 02:45:44,178 - core.initialization - INFO - ============================================================
+2026-02-07 02:45:46,211 - core.initialization - INFO - \u2713 Ollama service is running at http://localhost:11434
+2026-02-07 02:45:48,283 - core.initialization - INFO - \u2713 Chat model 'llama3.1:latest' is available
+2026-02-07 02:45:50,366 - core.initialization - INFO - \u2713 Embedding model 'mxbai-embed-large:latest' is available
+2026-02-07 02:45:50,398 - core.initialization - INFO - ??? MongoDB connection successful (mongodb://localhost:27017)
+2026-02-07 02:45:50,404 - core.initialization - INFO - \u2713 Chroma vector store is available (persist dir: ./db/chroma)
+2026-02-07 02:45:50,404 - core.initialization - INFO - ============================================================
+2026-02-07 02:45:50,404 - core.initialization - INFO - Initialization Check Summary:
+2026-02-07 02:45:50,404 - core.initialization - INFO - ============================================================
+2026-02-07 02:45:50,404 - core.initialization - INFO - \u2713 PASS: ollama_service
+2026-02-07 02:45:50,404 - core.initialization - INFO - \u2713 PASS: chat_model
+2026-02-07 02:45:50,404 - core.initialization - INFO - \u2713 PASS: embedding_model
+2026-02-07 02:45:50,404 - core.initialization - INFO - \u2713 PASS: mongodb
+2026-02-07 02:45:50,404 - core.initialization - INFO - \u2713 PASS: chroma_vectorstore
+2026-02-07 02:45:50,404 - core.initialization - INFO - ============================================================
+2026-02-07 02:45:50,404 - core.initialization - INFO - \u2713 All critical services initialized successfully!
+2026-02-07 02:45:50,441 - __main__ - INFO - Initialized session state with default page: chat
+2026-02-07 02:45:50,442 - ui.pages.chatbot - INFO - Initialized current_chat_id to None
+2026-02-07 02:45:50,442 - ui.pages.chatbot - INFO - Initialized current_chat_messages
+2026-02-07 02:45:50,443 - ui.pages.chatbot - INFO - Initialized pending_new_chat state
+2026-02-07 02:45:50,443 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-07 02:54:25,228 - __main__ - INFO - Initializing BSK Assistant Application...
+2026-02-07 02:54:25,228 - core.initialization - INFO - Initializing BSK Assistant Application...
+2026-02-07 02:54:25,228 - core.initialization - INFO - ============================================================
+2026-02-07 02:54:25,228 - core.initialization - INFO - Starting BSK Assistant Initialization Checks
+2026-02-07 02:54:25,228 - core.initialization - INFO - ============================================================
+2026-02-07 02:54:27,250 - core.initialization - INFO - \u2713 Ollama service is running at http://localhost:11434
+2026-02-07 02:54:29,322 - core.initialization - INFO - \u2713 Chat model 'llama3.1:latest' is available
+2026-02-07 02:54:31,377 - core.initialization - INFO - \u2713 Embedding model 'mxbai-embed-large:latest' is available
+2026-02-07 02:54:31,383 - core.initialization - INFO - ??? MongoDB connection successful (mongodb://localhost:27017)
+2026-02-07 02:54:31,388 - core.initialization - INFO - \u2713 Chroma vector store is available (persist dir: ./db/chroma)
+2026-02-07 02:54:31,388 - core.initialization - INFO - ============================================================
+2026-02-07 02:54:31,388 - core.initialization - INFO - Initialization Check Summary:
+2026-02-07 02:54:31,388 - core.initialization - INFO - ============================================================
+2026-02-07 02:54:31,388 - core.initialization - INFO - \u2713 PASS: ollama_service
+2026-02-07 02:54:31,388 - core.initialization - INFO - \u2713 PASS: chat_model
+2026-02-07 02:54:31,388 - core.initialization - INFO - \u2713 PASS: embedding_model
+2026-02-07 02:54:31,389 - core.initialization - INFO - \u2713 PASS: mongodb
+2026-02-07 02:54:31,389 - core.initialization - INFO - \u2713 PASS: chroma_vectorstore
+2026-02-07 02:54:31,389 - core.initialization - INFO - ============================================================
+2026-02-07 02:54:31,389 - core.initialization - INFO - \u2713 All critical services initialized successfully!
+2026-02-07 02:54:31,425 - __main__ - INFO - Initialized session state with default page: chat
+2026-02-07 02:54:31,426 - ui.pages.chatbot - INFO - Initialized current_chat_id to None
+2026-02-07 02:54:31,426 - ui.pages.chatbot - INFO - Initialized current_chat_messages
+2026-02-07 02:54:31,426 - ui.pages.chatbot - INFO - Initialized pending_new_chat state
+2026-02-07 02:54:31,426 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-07 02:56:26,680 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-07 02:56:26,687 - services.chat_service - INFO - Created new chat with UUID: b9d73bda-79ae-4e63-9fa7-7de37739b62a
+2026-02-07 02:56:26,687 - ui.components.chat_interface - INFO - Created new chat with UUID: b9d73bda-79ae-4e63-9fa7-7de37739b62a
+2026-02-07 02:56:26,692 - services.chat_service - INFO - Saved message to chat b9d73bda-79ae-4e63-9fa7-7de37739b62a
+2026-02-07 02:56:26,693 - services.chat_service - INFO - Updated chat b9d73bda-79ae-4e63-9fa7-7de37739b62a title: who you
+2026-02-07 02:56:26,695 - core.rag_engine - INFO - Processing query for chat b9d73bda-79ae-4e63-9fa7-7de37739b62a: who you
+2026-02-07 02:56:32,223 - core.rag_engine - INFO - No documents retrieved for query: Who are you
+2026-02-07 02:56:55,776 - core.rag_engine - INFO - Query processed successfully in 29.08s with 1 chunks
+2026-02-07 02:56:55,777 - core.rag_engine - WARNING - Failed to estimate token usage: Could not import transformers python package. This is needed in order to calculate get_token_ids. Please install it with `pip install transformers`.
+2026-02-07 02:56:55,780 - services.chat_service - INFO - Saved message to chat b9d73bda-79ae-4e63-9fa7-7de37739b62a
+2026-02-07 02:56:55,780 - ui.components.chat_interface - INFO - Saved assistant response to chat b9d73bda-79ae-4e63-9fa7-7de37739b62a
+2026-02-07 02:56:55,884 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-07 02:57:23,194 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-07 02:57:44,194 - core.vector_store - INFO - \u2713 Added 3 documents to Chroma collection
+2026-02-07 02:57:44,194 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-07 02:57:44,195 - core.vector_operations - INFO - \u2713 Successfully added 3 chunks for Apply - Redressal of RTI Queries & Tracking.pdf to Chroma
+2026-02-07 02:57:44,195 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Apply - Redressal of RTI Queries & Tracking.pdf (3 chunks)
+2026-02-07 02:57:44,198 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Apply - Redressal of RTI Queries & Tracking.pdf
+2026-02-07 02:57:44,198 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: Agricultural Marketing Department \u2192 Apply - Application for Farm Produce Transport
+2026-02-07 02:57:44,200 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Apply - Redressal of RTI Queries & Tracking.pdf
+2026-02-07 03:08:26,292 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-07 03:08:28,545 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-07 03:08:28,743 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-07 03:08:55,328 - __main__ - INFO - Initializing BSK Assistant Application...
+2026-02-07 03:08:55,328 - core.initialization - INFO - Initializing BSK Assistant Application...
+2026-02-07 03:08:55,328 - core.initialization - INFO - ============================================================
+2026-02-07 03:08:55,328 - core.initialization - INFO - Starting BSK Assistant Initialization Checks
+2026-02-07 03:08:55,328 - core.initialization - INFO - ============================================================
+2026-02-07 03:08:57,379 - core.initialization - INFO - \u2713 Ollama service is running at http://localhost:11434
+2026-02-07 03:08:59,409 - core.initialization - INFO - \u2713 Chat model 'llama3.1:latest' is available
+2026-02-07 03:09:01,470 - core.initialization - INFO - \u2713 Embedding model 'mxbai-embed-large:latest' is available
+2026-02-07 03:09:01,500 - core.initialization - INFO - ??? MongoDB connection successful (mongodb://localhost:27017)
+2026-02-07 03:09:01,531 - core.initialization - INFO - \u2713 Chroma vector store is available (persist dir: ./db/chroma)
+2026-02-07 03:09:01,532 - core.initialization - INFO - ============================================================
+2026-02-07 03:09:01,532 - core.initialization - INFO - Initialization Check Summary:
+2026-02-07 03:09:01,532 - core.initialization - INFO - ============================================================
+2026-02-07 03:09:01,532 - core.initialization - INFO - \u2713 PASS: ollama_service
+2026-02-07 03:09:01,532 - core.initialization - INFO - \u2713 PASS: chat_model
+2026-02-07 03:09:01,532 - core.initialization - INFO - \u2713 PASS: embedding_model
+2026-02-07 03:09:01,532 - core.initialization - INFO - \u2713 PASS: mongodb
+2026-02-07 03:09:01,532 - core.initialization - INFO - \u2713 PASS: chroma_vectorstore
+2026-02-07 03:09:01,532 - core.initialization - INFO - ============================================================
+2026-02-07 03:09:01,532 - core.initialization - INFO - \u2713 All critical services initialized successfully!
+2026-02-07 03:09:01,533 - __main__ - INFO - Initialized session state with default page: chat
+2026-02-07 03:09:01,533 - ui.pages.chatbot - INFO - Initialized current_chat_id to None
+2026-02-07 03:09:01,533 - ui.pages.chatbot - INFO - Initialized current_chat_messages
+2026-02-07 03:09:01,533 - ui.pages.chatbot - INFO - Initialized pending_new_chat state
+2026-02-07 03:09:01,534 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-07 03:09:04,785 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-07 03:09:04,865 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-07 03:29:59,118 - models.embeddings - INFO - Ollama  embeddings initialized successfully (mxbai-embed-large:latest) from http://localhost:11434
+2026-02-07 03:29:59,118 - core.vector_store - INFO - Chroma persist directory ensured: ./db/chroma
+2026-02-07 03:29:59,217 - core.vector_store - INFO - \u2713 Chroma vector store initialized successfully with collection: bsk_documents
+2026-02-07 03:29:59,217 - core.vector_store - INFO -   Persist directory: ./db/chroma
+2026-02-07 03:29:59,218 - models.llm_models - INFO - Ollama Llama 3.1 model initialized successfully from http://localhost:11434
+2026-02-07 03:29:59,218 - models.llm_models - INFO -   Model: llama3.1:latest
+2026-02-07 03:29:59,218 - models.llm_models - INFO -   Temperature: 0.2
+2026-02-07 03:29:59,218 - models.llm_models - INFO -   Streaming: False
+2026-02-07 03:29:59,218 - models.llm_models - INFO -   Context size: 16384
+2026-02-07 03:29:59,219 - core.rag_engine - INFO - Enhanced RAG chain created successfully (streaming optimized).
+2026-02-07 03:29:59,219 - core.rag_engine - INFO - Enhanced RAG chain initialized successfully
+2026-02-07 03:29:59,226 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-07 03:30:23,733 - core.vector_store - INFO - \u2713 Added 2 documents to Chroma collection
+2026-02-07 03:30:23,733 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-07 03:30:23,733 - core.vector_operations - INFO - \u2713 Successfully added 2 chunks for aadhaar link ration faq.pdf to Chroma
+2026-02-07 03:30:23,734 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: aadhaar link ration faq.pdf (2 chunks)
+2026-02-07 03:30:23,736 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: aadhaar link ration faq.pdf
+2026-02-07 03:30:23,737 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: Food & Supplies Department \u2192 Apply - Aadhaar & Mobile Link with Digital Ration Card
+2026-02-07 03:30:23,737 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: aadhaar link ration faq.pdf
+2026-02-07 03:31:46,547 - core.vector_store - INFO - \u2713 Added 25 documents to Chroma collection
+2026-02-07 03:31:46,547 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-07 03:31:46,547 - core.vector_operations - INFO - \u2713 Successfully added 25 chunks for Ration card faq.pdf to Chroma
+2026-02-07 03:31:46,548 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Ration card faq.pdf (25 chunks)
+2026-02-07 03:31:46,550 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Ration card faq.pdf
+2026-02-07 03:31:46,550 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: Food & Supplies Department \u2192 Apply - New Digital Ration Card
+2026-02-07 03:31:46,552 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Ration card faq.pdf
+2026-02-07 14:55:32,187 - __main__ - INFO - Initializing BSK Assistant Application...
+2026-02-07 14:55:32,187 - core.initialization - INFO - Initializing BSK Assistant Application...
+2026-02-07 14:55:32,187 - core.initialization - INFO - ============================================================
+2026-02-07 14:55:32,187 - core.initialization - INFO - Starting BSK Assistant Initialization Checks
+2026-02-07 14:55:32,187 - core.initialization - INFO - ============================================================
+2026-02-07 14:55:34,224 - core.initialization - INFO - \u2713 Ollama service is running at http://localhost:11434
+2026-02-07 14:55:36,285 - core.initialization - INFO - \u2713 Chat model 'llama3.1:latest' is available
+2026-02-07 14:55:38,380 - core.initialization - INFO - \u2713 Embedding model 'mxbai-embed-large:latest' is available
+2026-02-07 14:55:38,401 - core.initialization - INFO - ??? MongoDB connection successful (mongodb://localhost:27017)
+2026-02-07 14:55:38,408 - core.initialization - INFO - \u2713 Chroma vector store is available (persist dir: ./db/chroma)
+2026-02-07 14:55:38,408 - core.initialization - INFO - ============================================================
+2026-02-07 14:55:38,408 - core.initialization - INFO - Initialization Check Summary:
+2026-02-07 14:55:38,408 - core.initialization - INFO - ============================================================
+2026-02-07 14:55:38,408 - core.initialization - INFO - \u2713 PASS: ollama_service
+2026-02-07 14:55:38,408 - core.initialization - INFO - \u2713 PASS: chat_model
+2026-02-07 14:55:38,408 - core.initialization - INFO - \u2713 PASS: embedding_model
+2026-02-07 14:55:38,408 - core.initialization - INFO - \u2713 PASS: mongodb
+2026-02-07 14:55:38,408 - core.initialization - INFO - \u2713 PASS: chroma_vectorstore
+2026-02-07 14:55:38,408 - core.initialization - INFO - ============================================================
+2026-02-07 14:55:38,408 - core.initialization - INFO - \u2713 All critical services initialized successfully!
+2026-02-07 14:55:38,446 - __main__ - INFO - Initialized session state with default page: chat
+2026-02-07 14:55:38,447 - ui.pages.chatbot - INFO - Initialized current_chat_id to None
+2026-02-07 14:55:38,447 - ui.pages.chatbot - INFO - Initialized current_chat_messages
+2026-02-07 14:55:38,447 - ui.pages.chatbot - INFO - Initialized pending_new_chat state
+2026-02-07 14:55:38,447 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-07 14:57:50,733 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-07 15:03:57,798 - core.vector_store - INFO - \u2713 Added 1 documents to Chroma collection
+2026-02-07 15:03:57,799 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-07 15:03:57,799 - core.vector_operations - INFO - \u2713 Successfully added 1 chunks for Apply - Permission for Delayed Registration of Birth.pdf to Chroma
+2026-02-07 15:03:57,800 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Apply - Permission for Delayed Registration of Birth.pdf (1 chunks)
+2026-02-07 15:03:57,803 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Apply - Permission for Delayed Registration of Birth.pdf
+2026-02-07 15:03:57,804 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: Agricultural Marketing Department \u2192 Apply - Application for Farm Produce Transport
+2026-02-07 15:03:57,805 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Apply - Permission for Delayed Registration of Birth.pdf
+2026-02-07 15:04:28,925 - core.vector_store - INFO - \u2713 Added 2 documents to Chroma collection
+2026-02-07 15:04:28,926 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-07 15:04:28,926 - core.vector_operations - INFO - \u2713 Successfully added 2 chunks for aadhaar link ration faq.pdf to Chroma
+2026-02-07 15:04:28,927 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: aadhaar link ration faq.pdf (2 chunks)
+2026-02-07 15:04:28,928 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: aadhaar link ration faq.pdf
+2026-02-07 15:04:28,930 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: Agricultural Marketing Department \u2192 Apply - FPC Enrollment
+2026-02-07 15:04:28,931 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: aadhaar link ration faq.pdf
+2026-02-07 15:05:06,190 - core.vector_store - INFO - \u2713 Added 3 documents to Chroma collection
+2026-02-07 15:05:06,191 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-07 15:05:06,191 - core.vector_operations - INFO - \u2713 Successfully added 3 chunks for Apply - Redressal of RTI Queries & Tracking.pdf to Chroma
+2026-02-07 15:05:06,193 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Apply - Redressal of RTI Queries & Tracking.pdf (3 chunks)
+2026-02-07 15:05:06,194 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Apply - Redressal of RTI Queries & Tracking.pdf
+2026-02-07 15:05:06,195 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: Agricultural Marketing Department \u2192 Apply - Group Enrollment Form Other Than FPC
+2026-02-07 15:05:06,196 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Apply - Redressal of RTI Queries & Tracking.pdf
+2026-02-07 15:14:40,360 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-07 21:32:57,272 - models.embeddings - INFO - Ollama  embeddings initialized successfully (mxbai-embed-large:latest) from http://localhost:11434
+2026-02-07 21:32:57,276 - core.vector_store - INFO - Chroma persist directory ensured: ./db/chroma
+2026-02-07 21:32:57,566 - core.vector_store - INFO - \u2713 Chroma vector store initialized successfully with collection: bsk_documents
+2026-02-07 21:32:57,567 - core.vector_store - INFO -   Persist directory: ./db/chroma
+2026-02-07 21:32:57,572 - models.llm_models - INFO - Ollama Llama 3.1 model initialized successfully from http://localhost:11434
+2026-02-07 21:32:57,572 - models.llm_models - INFO -   Model: llama3.1:latest
+2026-02-07 21:32:57,572 - models.llm_models - INFO -   Temperature: 0.2
+2026-02-07 21:32:57,572 - models.llm_models - INFO -   Streaming: False
+2026-02-07 21:32:57,572 - models.llm_models - INFO -   Context size: 16384
+2026-02-07 21:32:57,578 - core.rag_engine - INFO - Enhanced RAG chain created successfully (streaming optimized).
+2026-02-07 21:32:57,578 - core.rag_engine - INFO - Enhanced RAG chain initialized successfully
+2026-02-07 21:32:57,612 - __main__ - INFO - Initializing BSK Assistant Application...
+2026-02-07 21:32:57,612 - core.initialization - INFO - Initializing BSK Assistant Application...
+2026-02-07 21:32:57,614 - core.initialization - INFO - ============================================================
+2026-02-07 21:32:57,614 - core.initialization - INFO - Starting BSK Assistant Initialization Checks
+2026-02-07 21:32:57,614 - core.initialization - INFO - ============================================================
+2026-02-07 21:32:59,706 - core.initialization - INFO - \u2713 Ollama service is running at http://localhost:11434
+2026-02-07 21:33:01,753 - core.initialization - INFO - \u2713 Chat model 'llama3.1:latest' is available
+2026-02-07 21:33:03,784 - core.initialization - INFO - \u2713 Embedding model 'mxbai-embed-large:latest' is available
+2026-02-07 21:33:03,790 - core.initialization - INFO - ??? MongoDB connection successful (mongodb://localhost:27017)
+2026-02-07 21:33:03,804 - core.initialization - INFO - \u2713 Chroma vector store is available (persist dir: ./db/chroma)
+2026-02-07 21:33:03,806 - core.initialization - INFO - ============================================================
+2026-02-07 21:33:03,806 - core.initialization - INFO - Initialization Check Summary:
+2026-02-07 21:33:03,806 - core.initialization - INFO - ============================================================
+2026-02-07 21:33:03,806 - core.initialization - INFO - \u2713 PASS: ollama_service
+2026-02-07 21:33:03,806 - core.initialization - INFO - \u2713 PASS: chat_model
+2026-02-07 21:33:03,807 - core.initialization - INFO - \u2713 PASS: embedding_model
+2026-02-07 21:33:03,807 - core.initialization - INFO - \u2713 PASS: mongodb
+2026-02-07 21:33:03,807 - core.initialization - INFO - \u2713 PASS: chroma_vectorstore
+2026-02-07 21:33:03,807 - core.initialization - INFO - ============================================================
+2026-02-07 21:33:03,807 - core.initialization - INFO - \u2713 All critical services initialized successfully!
+2026-02-07 21:33:03,812 - __main__ - INFO - Initialized session state with default page: chat
+2026-02-07 21:33:03,812 - ui.pages.chatbot - INFO - Initialized current_chat_id to None
+2026-02-07 21:33:03,814 - ui.pages.chatbot - INFO - Initialized current_chat_messages
+2026-02-07 21:33:03,814 - ui.pages.chatbot - INFO - Initialized pending_new_chat state
+2026-02-07 21:33:03,815 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-07 21:33:03,855 - services.chat_service - INFO - Created new chat with UUID: ef891b63-ca64-4d15-9e07-59fb7d776b99
+2026-02-07 21:33:03,856 - ui.components.chat_interface - INFO - Created new chat with UUID: ef891b63-ca64-4d15-9e07-59fb7d776b99
+2026-02-07 21:33:03,870 - services.chat_service - INFO - Saved message to chat ef891b63-ca64-4d15-9e07-59fb7d776b99
+2026-02-07 21:33:03,872 - services.chat_service - INFO - Updated chat ef891b63-ca64-4d15-9e07-59fb7d776b99 title: redressal rti
+2026-02-07 21:33:03,878 - core.rag_engine - INFO - Processing query for chat ef891b63-ca64-4d15-9e07-59fb7d776b99: redressal rti 
+2026-02-07 21:33:35,120 - core.rag_engine - INFO - Processing 6 retrieved documents for chat ef891b63-ca64-4d15-9e07-59fb7d776b99
+2026-02-07 21:37:01,942 - core.rag_engine - INFO - Query processed successfully in 238.06s with 1 chunks
+2026-02-07 21:37:01,947 - core.rag_engine - WARNING - Failed to estimate token usage: Could not import transformers python package. This is needed in order to calculate get_token_ids. Please install it with `pip install transformers`.
+2026-02-07 21:37:01,953 - services.chat_service - INFO - Saved message to chat ef891b63-ca64-4d15-9e07-59fb7d776b99
+2026-02-07 21:37:01,954 - ui.components.chat_interface - INFO - Saved assistant response to chat ef891b63-ca64-4d15-9e07-59fb7d776b99
+2026-02-07 21:37:02,888 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-07 21:38:46,099 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-07 21:38:46,123 - services.chat_service - INFO - Saved message to chat ef891b63-ca64-4d15-9e07-59fb7d776b99
+2026-02-07 21:38:46,129 - core.rag_engine - INFO - Processing query for chat ef891b63-ca64-4d15-9e07-59fb7d776b99: Apply - Redressal of RTI Queries & Tracking
+2026-02-07 21:39:18,372 - core.rag_engine - INFO - Processing 6 retrieved documents for chat ef891b63-ca64-4d15-9e07-59fb7d776b99
+2026-02-07 21:43:06,075 - core.rag_engine - INFO - Query processed successfully in 259.95s with 1 chunks
+2026-02-07 21:43:06,076 - core.rag_engine - WARNING - Failed to estimate token usage: Could not import transformers python package. This is needed in order to calculate get_token_ids. Please install it with `pip install transformers`.
+2026-02-07 21:43:06,080 - services.chat_service - INFO - Saved message to chat ef891b63-ca64-4d15-9e07-59fb7d776b99
+2026-02-07 21:43:06,081 - ui.components.chat_interface - INFO - Saved assistant response to chat ef891b63-ca64-4d15-9e07-59fb7d776b99
+2026-02-07 21:43:06,190 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-08 01:12:13,171 - __main__ - INFO - Initializing BSK Assistant Application...
+2026-02-08 01:12:13,172 - core.initialization - INFO - Initializing BSK Assistant Application...
+2026-02-08 01:12:13,172 - core.initialization - INFO - ============================================================
+2026-02-08 01:12:13,172 - core.initialization - INFO - Starting BSK Assistant Initialization Checks
+2026-02-08 01:12:13,172 - core.initialization - INFO - ============================================================
+2026-02-08 01:12:15,273 - core.initialization - INFO - \u2713 Ollama service is running at http://localhost:11434
+2026-02-08 01:12:17,326 - core.initialization - INFO - \u2713 Chat model 'llama3.1:latest' is available
+2026-02-08 01:12:19,398 - core.initialization - INFO - \u2713 Embedding model 'mxbai-embed-large:latest' is available
+2026-02-08 01:12:19,422 - core.initialization - INFO - ??? MongoDB connection successful (mongodb://localhost:27017)
+2026-02-08 01:12:19,436 - core.initialization - INFO - \u2713 Chroma vector store is available (persist dir: ./db/chroma)
+2026-02-08 01:12:19,436 - core.initialization - INFO - ============================================================
+2026-02-08 01:12:19,436 - core.initialization - INFO - Initialization Check Summary:
+2026-02-08 01:12:19,436 - core.initialization - INFO - ============================================================
+2026-02-08 01:12:19,436 - core.initialization - INFO - \u2713 PASS: ollama_service
+2026-02-08 01:12:19,436 - core.initialization - INFO - \u2713 PASS: chat_model
+2026-02-08 01:12:19,436 - core.initialization - INFO - \u2713 PASS: embedding_model
+2026-02-08 01:12:19,436 - core.initialization - INFO - \u2713 PASS: mongodb
+2026-02-08 01:12:19,436 - core.initialization - INFO - \u2713 PASS: chroma_vectorstore
+2026-02-08 01:12:19,436 - core.initialization - INFO - ============================================================
+2026-02-08 01:12:19,436 - core.initialization - INFO - \u2713 All critical services initialized successfully!
+2026-02-08 01:12:19,473 - __main__ - INFO - Initialized session state with default page: chat
+2026-02-08 01:12:19,473 - ui.pages.chatbot - INFO - Initialized current_chat_id to None
+2026-02-08 01:12:19,473 - ui.pages.chatbot - INFO - Initialized current_chat_messages
+2026-02-08 01:12:19,474 - ui.pages.chatbot - INFO - Initialized pending_new_chat state
+2026-02-08 01:12:19,474 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-08 01:12:25,568 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-08 01:13:24,334 - core.vector_store - INFO - \u2713 Added 8 documents to Chroma collection
+2026-02-08 01:13:24,335 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-08 01:13:24,335 - core.vector_operations - INFO - \u2713 Successfully added 8 chunks for KoustavPodder_11500222082 (2).pdf to Chroma
+2026-02-08 01:13:24,336 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: KoustavPodder_11500222082 (2).pdf (8 chunks)
+2026-02-08 01:13:24,339 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: KoustavPodder_11500222082 (2).pdf
+2026-02-08 01:13:24,345 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: Agriculture Department \u2192 Apply - Bangla Shasya Bima
+2026-02-08 01:13:24,346 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: KoustavPodder_11500222082 (2).pdf
+2026-02-08 01:14:09,006 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-08 01:15:57,598 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-08 01:15:57,612 - services.chat_service - INFO - Created new chat with UUID: b163922d-4724-4908-89e3-ff46eb5a488b
+2026-02-08 01:15:57,612 - ui.components.chat_interface - INFO - Created new chat with UUID: b163922d-4724-4908-89e3-ff46eb5a488b
+2026-02-08 01:15:57,622 - services.chat_service - INFO - Saved message to chat b163922d-4724-4908-89e3-ff46eb5a488b
+2026-02-08 01:15:57,624 - services.chat_service - INFO - Updated chat b163922d-4724-4908-89e3-ff46eb5a488b title: network vulnerabilities
+2026-02-08 01:15:57,626 - core.rag_engine - INFO - Processing query for chat b163922d-4724-4908-89e3-ff46eb5a488b: network vulnerabilities
+2026-02-08 01:16:15,456 - core.rag_engine - INFO - Processing 6 retrieved documents for chat b163922d-4724-4908-89e3-ff46eb5a488b
+2026-02-08 01:18:01,994 - core.rag_engine - INFO - Query processed successfully in 124.37s with 1 chunks
+2026-02-08 01:18:01,996 - core.rag_engine - WARNING - Failed to estimate token usage: Could not import transformers python package. This is needed in order to calculate get_token_ids. Please install it with `pip install transformers`.
+2026-02-08 01:18:02,001 - services.chat_service - INFO - Saved message to chat b163922d-4724-4908-89e3-ff46eb5a488b
+2026-02-08 01:18:02,001 - ui.components.chat_interface - INFO - Saved assistant response to chat b163922d-4724-4908-89e3-ff46eb5a488b
+2026-02-08 01:18:02,251 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-10 21:56:00,451 - __main__ - INFO - Initializing BSK Assistant Application...
+2026-02-10 21:56:00,451 - core.initialization - INFO - Initializing BSK Assistant Application...
+2026-02-10 21:56:00,451 - core.initialization - INFO - ============================================================
+2026-02-10 21:56:00,451 - core.initialization - INFO - Starting BSK Assistant Initialization Checks
+2026-02-10 21:56:00,451 - core.initialization - INFO - ============================================================
+2026-02-10 21:56:02,534 - core.initialization - INFO - \u2713 Ollama service is running at http://localhost:11434
+2026-02-10 21:56:04,612 - core.initialization - INFO - \u2713 Chat model 'llama3.1:latest' is available
+2026-02-10 21:56:06,694 - core.initialization - INFO - \u2713 Embedding model 'mxbai-embed-large:latest' is available
+2026-02-10 21:56:06,707 - core.initialization - INFO - ??? MongoDB connection successful (mongodb://localhost:27017)
+2026-02-10 21:56:06,713 - core.initialization - INFO - \u2713 Chroma vector store is available (persist dir: ./db/chroma)
+2026-02-10 21:56:06,713 - core.initialization - INFO - ============================================================
+2026-02-10 21:56:06,713 - core.initialization - INFO - Initialization Check Summary:
+2026-02-10 21:56:06,713 - core.initialization - INFO - ============================================================
+2026-02-10 21:56:06,714 - core.initialization - INFO - \u2713 PASS: ollama_service
+2026-02-10 21:56:06,714 - core.initialization - INFO - \u2713 PASS: chat_model
+2026-02-10 21:56:06,714 - core.initialization - INFO - \u2713 PASS: embedding_model
+2026-02-10 21:56:06,714 - core.initialization - INFO - \u2713 PASS: mongodb
+2026-02-10 21:56:06,714 - core.initialization - INFO - \u2713 PASS: chroma_vectorstore
+2026-02-10 21:56:06,714 - core.initialization - INFO - ============================================================
+2026-02-10 21:56:06,714 - core.initialization - INFO - \u2713 All critical services initialized successfully!
+2026-02-10 21:56:06,751 - __main__ - INFO - Initialized session state with default page: chat
+2026-02-10 21:56:06,752 - ui.pages.chatbot - INFO - Initialized current_chat_id to None
+2026-02-10 21:56:06,752 - ui.pages.chatbot - INFO - Initialized current_chat_messages
+2026-02-10 21:56:06,752 - ui.pages.chatbot - INFO - Initialized pending_new_chat state
+2026-02-10 21:56:06,752 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-10 21:56:12,453 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-10 21:59:14,243 - __main__ - INFO - Initializing BSK Assistant Application...
+2026-02-10 21:59:14,243 - core.initialization - INFO - Initializing BSK Assistant Application...
+2026-02-10 21:59:14,244 - core.initialization - INFO - ============================================================
+2026-02-10 21:59:14,244 - core.initialization - INFO - Starting BSK Assistant Initialization Checks
+2026-02-10 21:59:14,244 - core.initialization - INFO - ============================================================
+2026-02-10 21:59:16,303 - core.initialization - INFO - \u2713 Ollama service is running at http://localhost:11434
+2026-02-10 21:59:18,336 - core.initialization - INFO - \u2713 Chat model 'llama3.1:latest' is available
+2026-02-10 21:59:20,394 - core.initialization - INFO - \u2713 Embedding model 'mxbai-embed-large:latest' is available
+2026-02-10 21:59:20,396 - core.initialization - INFO - ??? MongoDB connection successful (mongodb://localhost:27017)
+2026-02-10 21:59:20,401 - core.initialization - INFO - \u2713 Chroma vector store is available (persist dir: ./db/chroma)
+2026-02-10 21:59:20,401 - core.initialization - INFO - ============================================================
+2026-02-10 21:59:20,401 - core.initialization - INFO - Initialization Check Summary:
+2026-02-10 21:59:20,401 - core.initialization - INFO - ============================================================
+2026-02-10 21:59:20,401 - core.initialization - INFO - \u2713 PASS: ollama_service
+2026-02-10 21:59:20,401 - core.initialization - INFO - \u2713 PASS: chat_model
+2026-02-10 21:59:20,401 - core.initialization - INFO - \u2713 PASS: embedding_model
+2026-02-10 21:59:20,401 - core.initialization - INFO - \u2713 PASS: mongodb
+2026-02-10 21:59:20,401 - core.initialization - INFO - \u2713 PASS: chroma_vectorstore
+2026-02-10 21:59:20,401 - core.initialization - INFO - ============================================================
+2026-02-10 21:59:20,401 - core.initialization - INFO - \u2713 All critical services initialized successfully!
+2026-02-10 21:59:20,436 - __main__ - INFO - Initialized session state with default page: chat
+2026-02-10 21:59:20,438 - ui.pages.chatbot - INFO - Initialized current_chat_id to None
+2026-02-10 21:59:20,438 - ui.pages.chatbot - INFO - Initialized current_chat_messages
+2026-02-10 21:59:20,438 - ui.pages.chatbot - INFO - Initialized pending_new_chat state
+2026-02-10 21:59:20,438 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-10 21:59:24,023 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-10 22:00:05,189 - core.vector_store - INFO - \u2713 Added 2 documents to Chroma collection
+2026-02-10 22:00:05,189 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:00:05,190 - core.vector_operations - INFO - \u2713 Successfully added 2 chunks for aadhaar link ration faq.pdf to Chroma
+2026-02-10 22:00:05,191 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: aadhaar link ration faq.pdf (2 chunks)
+2026-02-10 22:00:05,192 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: aadhaar link ration faq.pdf
+2026-02-10 22:00:05,194 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:00:05,195 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: aadhaar link ration faq.pdf
+2026-02-10 22:00:30,340 - core.vector_store - INFO - \u2713 Added 10 documents to Chroma collection
+2026-02-10 22:00:30,340 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:00:30,340 - core.vector_operations - INFO - \u2713 Successfully added 10 chunks for About - Sufal Bangla .pdf to Chroma
+2026-02-10 22:00:30,341 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: About - Sufal Bangla .pdf (10 chunks)
+2026-02-10 22:00:30,342 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: About - Sufal Bangla .pdf
+2026-02-10 22:00:30,343 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:00:30,344 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: About - Sufal Bangla .pdf
+2026-02-10 22:00:32,712 - core.vector_store - INFO - \u2713 Added 1 documents to Chroma collection
+2026-02-10 22:00:32,713 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:00:32,713 - core.vector_operations - INFO - \u2713 Successfully added 1 chunks for Apply - Distance Certificate for Students.pdf to Chroma
+2026-02-10 22:00:32,714 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Apply - Distance Certificate for Students.pdf (1 chunks)
+2026-02-10 22:00:32,715 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Apply - Distance Certificate for Students.pdf
+2026-02-10 22:00:32,717 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:00:32,717 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Apply - Distance Certificate for Students.pdf
+2026-02-10 22:00:35,379 - core.vector_store - INFO - \u2713 Added 1 documents to Chroma collection
+2026-02-10 22:00:35,380 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:00:35,380 - core.vector_operations - INFO - \u2713 Successfully added 1 chunks for Apply - Form -B Under West Bengal Apartment Ownership Act 1972.pdf to Chroma
+2026-02-10 22:00:35,381 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Apply - Form -B Under West Bengal Apartment Ownership Act 1972.pdf (1 chunks)
+2026-02-10 22:00:35,382 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Apply - Form -B Under West Bengal Apartment Ownership Act 1972.pdf
+2026-02-10 22:00:35,383 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:00:35,383 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Apply - Form -B Under West Bengal Apartment Ownership Act 1972.pdf
+2026-02-10 22:00:38,006 - core.vector_store - INFO - \u2713 Added 1 documents to Chroma collection
+2026-02-10 22:00:38,006 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:00:38,007 - core.vector_operations - INFO - \u2713 Successfully added 1 chunks for Apply - Form -C Under West Bengal Apartment Ownership Act 1972.pdf to Chroma
+2026-02-10 22:00:38,007 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Apply - Form -C Under West Bengal Apartment Ownership Act 1972.pdf (1 chunks)
+2026-02-10 22:00:38,010 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Apply - Form -C Under West Bengal Apartment Ownership Act 1972.pdf
+2026-02-10 22:00:38,010 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:00:38,011 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Apply - Form -C Under West Bengal Apartment Ownership Act 1972.pdf
+2026-02-10 22:00:40,522 - core.vector_store - INFO - \u2713 Added 1 documents to Chroma collection
+2026-02-10 22:00:40,522 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:00:40,522 - core.vector_operations - INFO - \u2713 Successfully added 1 chunks for Apply - Ordinary Residencial Certificate.pdf to Chroma
+2026-02-10 22:00:40,523 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Apply - Ordinary Residencial Certificate.pdf (1 chunks)
+2026-02-10 22:00:40,524 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Apply - Ordinary Residencial Certificate.pdf
+2026-02-10 22:00:40,525 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:00:40,526 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Apply - Ordinary Residencial Certificate.pdf
+2026-02-10 22:00:43,028 - core.vector_store - INFO - \u2713 Added 1 documents to Chroma collection
+2026-02-10 22:00:43,029 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:00:43,029 - core.vector_operations - INFO - \u2713 Successfully added 1 chunks for Apply - Permission for Delayed Registration of Birth.pdf to Chroma
+2026-02-10 22:00:43,030 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Apply - Permission for Delayed Registration of Birth.pdf (1 chunks)
+2026-02-10 22:00:43,031 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Apply - Permission for Delayed Registration of Birth.pdf
+2026-02-10 22:00:43,032 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:00:43,033 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Apply - Permission for Delayed Registration of Birth.pdf
+2026-02-10 22:00:45,523 - core.vector_store - INFO - \u2713 Added 1 documents to Chroma collection
+2026-02-10 22:00:45,523 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:00:45,523 - core.vector_operations - INFO - \u2713 Successfully added 1 chunks for Apply - Permission for Delayed Registration of DEATH.pdf to Chroma
+2026-02-10 22:00:45,524 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Apply - Permission for Delayed Registration of DEATH.pdf (1 chunks)
+2026-02-10 22:00:45,525 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Apply - Permission for Delayed Registration of DEATH.pdf
+2026-02-10 22:00:45,527 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:00:45,527 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Apply - Permission for Delayed Registration of DEATH.pdf
+2026-02-10 22:00:52,522 - core.vector_store - INFO - \u2713 Added 3 documents to Chroma collection
+2026-02-10 22:00:52,522 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:00:52,522 - core.vector_operations - INFO - \u2713 Successfully added 3 chunks for Apply - Redressal of RTI Queries & Tracking.pdf to Chroma
+2026-02-10 22:00:52,523 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Apply - Redressal of RTI Queries & Tracking.pdf (3 chunks)
+2026-02-10 22:00:52,525 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Apply - Redressal of RTI Queries & Tracking.pdf
+2026-02-10 22:00:52,526 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:00:52,527 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Apply - Redressal of RTI Queries & Tracking.pdf
+2026-02-10 22:00:57,729 - core.vector_store - INFO - \u2713 Added 2 documents to Chroma collection
+2026-02-10 22:00:57,729 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:00:57,729 - core.vector_operations - INFO - \u2713 Successfully added 2 chunks for Apply - Registration of Association of Apartment Owners.pdf to Chroma
+2026-02-10 22:00:57,730 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Apply - Registration of Association of Apartment Owners.pdf (2 chunks)
+2026-02-10 22:00:57,732 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Apply - Registration of Association of Apartment Owners.pdf
+2026-02-10 22:00:57,733 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:00:57,733 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Apply - Registration of Association of Apartment Owners.pdf
+2026-02-10 22:01:02,995 - core.vector_store - INFO - \u2713 Added 2 documents to Chroma collection
+2026-02-10 22:01:02,996 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:01:02,996 - core.vector_operations - INFO - \u2713 Successfully added 2 chunks for Apply - Sufal Bangla Individual Enrollment Form - Guidelines.pdf to Chroma
+2026-02-10 22:01:02,997 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Apply - Sufal Bangla Individual Enrollment Form - Guidelines.pdf (2 chunks)
+2026-02-10 22:01:02,998 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Apply - Sufal Bangla Individual Enrollment Form - Guidelines.pdf
+2026-02-10 22:01:02,999 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:01:03,000 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Apply - Sufal Bangla Individual Enrollment Form - Guidelines.pdf
+2026-02-10 22:01:07,948 - core.vector_store - INFO - \u2713 Added 2 documents to Chroma collection
+2026-02-10 22:01:07,948 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:01:07,949 - core.vector_operations - INFO - \u2713 Successfully added 2 chunks for Apply e-permit (agrimarket).pdf to Chroma
+2026-02-10 22:01:07,949 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Apply e-permit (agrimarket).pdf (2 chunks)
+2026-02-10 22:01:07,951 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Apply e-permit (agrimarket).pdf
+2026-02-10 22:01:07,952 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:01:07,952 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Apply e-permit (agrimarket).pdf
+2026-02-10 22:01:13,304 - core.vector_store - INFO - \u2713 Added 2 documents to Chroma collection
+2026-02-10 22:01:13,304 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:01:13,305 - core.vector_operations - INFO - \u2713 Successfully added 2 chunks for FPC - Guidelines.pdf to Chroma
+2026-02-10 22:01:13,306 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: FPC - Guidelines.pdf (2 chunks)
+2026-02-10 22:01:13,307 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: FPC - Guidelines.pdf
+2026-02-10 22:01:13,308 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:01:13,308 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: FPC - Guidelines.pdf
+2026-02-10 22:01:18,267 - core.vector_store - INFO - \u2713 Added 2 documents to Chroma collection
+2026-02-10 22:01:18,267 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:01:18,267 - core.vector_operations - INFO - \u2713 Successfully added 2 chunks for FPC- Authorization_Document.pdf to Chroma
+2026-02-10 22:01:18,268 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: FPC- Authorization_Document.pdf (2 chunks)
+2026-02-10 22:01:18,269 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: FPC- Authorization_Document.pdf
+2026-02-10 22:01:18,271 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:01:18,272 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: FPC- Authorization_Document.pdf
+2026-02-10 22:01:23,276 - core.vector_store - INFO - \u2713 Added 2 documents to Chroma collection
+2026-02-10 22:01:23,276 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:01:23,277 - core.vector_operations - INFO - \u2713 Successfully added 2 chunks for Group Enrollment - Authorization_Document.pdf to Chroma
+2026-02-10 22:01:23,277 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Group Enrollment - Authorization_Document.pdf (2 chunks)
+2026-02-10 22:01:23,279 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Group Enrollment - Authorization_Document.pdf
+2026-02-10 22:01:23,281 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:01:23,282 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Group Enrollment - Authorization_Document.pdf
+2026-02-10 22:01:31,039 - core.vector_store - INFO - \u2713 Added 3 documents to Chroma collection
+2026-02-10 22:01:31,039 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:01:31,040 - core.vector_operations - INFO - \u2713 Successfully added 3 chunks for Group Enrollment - Guidelines.pdf to Chroma
+2026-02-10 22:01:31,040 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Group Enrollment - Guidelines.pdf (3 chunks)
+2026-02-10 22:01:31,042 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Group Enrollment - Guidelines.pdf
+2026-02-10 22:01:31,043 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:01:31,043 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Group Enrollment - Guidelines.pdf
+2026-02-10 22:05:59,572 - core.vector_store - INFO - \u2713 Added 108 documents to Chroma collection
+2026-02-10 22:05:59,572 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:05:59,573 - core.vector_operations - INFO - \u2713 Successfully added 108 chunks for kanyashre guidelines 2.0.pdf to Chroma
+2026-02-10 22:05:59,574 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: kanyashre guidelines 2.0.pdf (108 chunks)
+2026-02-10 22:05:59,575 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: kanyashre guidelines 2.0.pdf
+2026-02-10 22:05:59,577 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:05:59,577 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: kanyashre guidelines 2.0.pdf
+2026-02-10 22:05:59,629 - ui.pages.vector_operations - ERROR - Chroma upload failed for kanyashree Conditional Cash Transfer Provisions.pdf: {'success': False, 'message': 'Cleaned document text is empty.', 'chunks_added': 0}
+2026-02-10 22:05:59,681 - ui.pages.vector_operations - ERROR - Chroma upload failed for kanyashree objectives.pdf: {'success': False, 'message': 'Cleaned document text is empty.', 'chunks_added': 0}
+2026-02-10 22:05:59,742 - ui.pages.vector_operations - ERROR - Chroma upload failed for kanyashree rationale.pdf: {'success': False, 'message': 'Cleaned document text is empty.', 'chunks_added': 0}
+2026-02-10 22:06:27,160 - core.vector_store - INFO - \u2713 Added 11 documents to Chroma collection
+2026-02-10 22:06:27,160 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:06:27,160 - core.vector_operations - INFO - \u2713 Successfully added 11 chunks for Khelashree Scheme 2025.pdf to Chroma
+2026-02-10 22:06:27,161 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Khelashree Scheme 2025.pdf (11 chunks)
+2026-02-10 22:06:27,164 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Khelashree Scheme 2025.pdf
+2026-02-10 22:06:27,164 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:06:27,165 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Khelashree Scheme 2025.pdf
+2026-02-10 22:06:29,481 - core.vector_store - INFO - \u2713 Added 1 documents to Chroma collection
+2026-02-10 22:06:29,481 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:06:29,481 - core.vector_operations - INFO - \u2713 Successfully added 1 chunks for Payment Of Property Tax At Nkda.pdf to Chroma
+2026-02-10 22:06:29,482 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Payment Of Property Tax At Nkda.pdf (1 chunks)
+2026-02-10 22:06:29,483 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Payment Of Property Tax At Nkda.pdf
+2026-02-10 22:06:29,484 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:06:29,486 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Payment Of Property Tax At Nkda.pdf
+2026-02-10 22:07:35,913 - core.vector_store - INFO - \u2713 Added 25 documents to Chroma collection
+2026-02-10 22:07:35,913 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:07:35,914 - core.vector_operations - INFO - \u2713 Successfully added 25 chunks for Ration card faq.pdf to Chroma
+2026-02-10 22:07:35,915 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Ration card faq.pdf (25 chunks)
+2026-02-10 22:07:35,916 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Ration card faq.pdf
+2026-02-10 22:07:35,917 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:07:35,917 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Ration card faq.pdf
+2026-02-10 22:07:41,170 - core.vector_store - INFO - \u2713 Added 2 documents to Chroma collection
+2026-02-10 22:07:41,170 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:07:41,170 - core.vector_operations - INFO - \u2713 Successfully added 2 chunks for Sufal Bangla  - Training.pdf to Chroma
+2026-02-10 22:07:41,171 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Sufal Bangla  - Training.pdf (2 chunks)
+2026-02-10 22:07:41,173 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Sufal Bangla  - Training.pdf
+2026-02-10 22:07:41,174 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:07:41,175 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Sufal Bangla  - Training.pdf
+2026-02-10 22:07:48,635 - core.vector_store - INFO - \u2713 Added 3 documents to Chroma collection
+2026-02-10 22:07:48,635 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:07:48,635 - core.vector_operations - INFO - \u2713 Successfully added 3 chunks for Sufal Bangla - Benefits to the Consumers.pdf to Chroma
+2026-02-10 22:07:48,636 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Sufal Bangla - Benefits to the Consumers.pdf (3 chunks)
+2026-02-10 22:07:48,637 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Sufal Bangla - Benefits to the Consumers.pdf
+2026-02-10 22:07:48,638 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:07:48,639 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Sufal Bangla - Benefits to the Consumers.pdf
+2026-02-10 22:08:01,257 - core.vector_store - INFO - \u2713 Added 5 documents to Chroma collection
+2026-02-10 22:08:01,257 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:08:01,257 - core.vector_operations - INFO - \u2713 Successfully added 5 chunks for Sufal Bangla - Benefits to the Farmers.pdf to Chroma
+2026-02-10 22:08:01,258 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Sufal Bangla - Benefits to the Farmers.pdf (5 chunks)
+2026-02-10 22:08:01,259 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Sufal Bangla - Benefits to the Farmers.pdf
+2026-02-10 22:08:01,261 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:08:01,262 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Sufal Bangla - Benefits to the Farmers.pdf
+2026-02-10 22:08:06,547 - core.vector_store - INFO - \u2713 Added 2 documents to Chroma collection
+2026-02-10 22:08:06,547 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:08:06,547 - core.vector_operations - INFO - \u2713 Successfully added 2 chunks for Sufal Bangla - Key Personnel.pdf to Chroma
+2026-02-10 22:08:06,549 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Sufal Bangla - Key Personnel.pdf (2 chunks)
+2026-02-10 22:08:06,550 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Sufal Bangla - Key Personnel.pdf
+2026-02-10 22:08:06,551 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:08:06,551 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Sufal Bangla - Key Personnel.pdf
+2026-02-10 22:08:11,504 - core.vector_store - INFO - \u2713 Added 2 documents to Chroma collection
+2026-02-10 22:08:11,504 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:08:11,504 - core.vector_operations - INFO - \u2713 Successfully added 2 chunks for Sufal Bangla Individual Enrollment Form - Authorization_Document.pdf to Chroma
+2026-02-10 22:08:11,505 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Sufal Bangla Individual Enrollment Form - Authorization_Document.pdf (2 chunks)
+2026-02-10 22:08:11,506 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Sufal Bangla Individual Enrollment Form - Authorization_Document.pdf
+2026-02-10 22:08:11,507 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:08:11,508 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Sufal Bangla Individual Enrollment Form - Authorization_Document.pdf
+2026-02-10 22:08:53,701 - core.vector_store - INFO - \u2713 Added 17 documents to Chroma collection
+2026-02-10 22:08:53,701 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:08:53,701 - core.vector_operations - INFO - \u2713 Successfully added 17 chunks for USER_MANUAL_FOR_TRADERS_EPERMIT.pdf to Chroma
+2026-02-10 22:08:53,702 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: USER_MANUAL_FOR_TRADERS_EPERMIT.pdf (17 chunks)
+2026-02-10 22:08:53,704 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: USER_MANUAL_FOR_TRADERS_EPERMIT.pdf
+2026-02-10 22:08:53,705 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:08:53,706 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: USER_MANUAL_FOR_TRADERS_EPERMIT.pdf
+2026-02-10 22:14:59,777 - core.vector_store - INFO - \u2713 Added 82 documents to Chroma collection
+2026-02-10 22:14:59,778 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:14:59,778 - core.vector_operations - INFO - \u2713 Successfully added 82 chunks for About Bangla Sahayata Kendras and services.pdf to Chroma
+2026-02-10 22:14:59,779 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: About Bangla Sahayata Kendras and services.pdf (82 chunks)
+2026-02-10 22:14:59,781 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: About Bangla Sahayata Kendras and services.pdf
+2026-02-10 22:14:59,781 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:14:59,782 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: About Bangla Sahayata Kendras and services.pdf
+2026-02-10 22:15:26,073 - core.vector_store - INFO - \u2713 Added 5 documents to Chroma collection
+2026-02-10 22:15:26,074 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:15:26,074 - core.vector_operations - INFO - \u2713 Successfully added 5 chunks for ANANDADHARA.pdf to Chroma
+2026-02-10 22:15:26,075 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: ANANDADHARA.pdf (5 chunks)
+2026-02-10 22:15:26,077 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: ANANDADHARA.pdf
+2026-02-10 22:15:26,078 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:15:26,080 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: ANANDADHARA.pdf
+2026-02-10 22:15:59,137 - core.vector_store - INFO - \u2713 Added 13 documents to Chroma collection
+2026-02-10 22:15:59,138 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:15:59,138 - core.vector_operations - INFO - \u2713 Successfully added 13 chunks for Application for Aikyasree Scholarship.pdf to Chroma
+2026-02-10 22:15:59,138 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Application for Aikyasree Scholarship.pdf (13 chunks)
+2026-02-10 22:15:59,140 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Application for Aikyasree Scholarship.pdf
+2026-02-10 22:15:59,141 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:15:59,142 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Application for Aikyasree Scholarship.pdf
+2026-02-10 22:16:11,308 - core.vector_store - INFO - \u2713 Added 5 documents to Chroma collection
+2026-02-10 22:16:11,308 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:16:11,308 - core.vector_operations - INFO - \u2713 Successfully added 5 chunks for Application for Income Certificates.pdf to Chroma
+2026-02-10 22:16:11,310 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Application for Income Certificates.pdf (5 chunks)
+2026-02-10 22:16:11,311 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Application for Income Certificates.pdf
+2026-02-10 22:16:11,312 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:16:11,313 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Application for Income Certificates.pdf
+2026-02-10 22:16:29,543 - core.vector_store - INFO - \u2713 Added 7 documents to Chroma collection
+2026-02-10 22:16:29,543 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:16:29,544 - core.vector_operations - INFO - \u2713 Successfully added 7 chunks for Application for mutation of holding in municipality or Municipal Corporation.pdf to Chroma
+2026-02-10 22:16:29,545 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Application for mutation of holding in municipality or Municipal Corporation.pdf (7 chunks)
+2026-02-10 22:16:29,546 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Application for mutation of holding in municipality or Municipal Corporation.pdf
+2026-02-10 22:16:29,547 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:16:29,548 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Application for mutation of holding in municipality or Municipal Corporation.pdf
+2026-02-10 22:16:42,538 - core.vector_store - INFO - \u2713 Added 5 documents to Chroma collection
+2026-02-10 22:16:42,538 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:16:42,538 - core.vector_operations - INFO - \u2713 Successfully added 5 chunks for Application_Procedure_svmcm.pdf to Chroma
+2026-02-10 22:16:42,539 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Application_Procedure_svmcm.pdf (5 chunks)
+2026-02-10 22:16:42,540 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Application_Procedure_svmcm.pdf
+2026-02-10 22:16:42,541 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:16:42,541 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Application_Procedure_svmcm.pdf
+2026-02-10 22:16:49,766 - core.vector_store - INFO - \u2713 Added 3 documents to Chroma collection
+2026-02-10 22:16:49,766 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:16:49,766 - core.vector_operations - INFO - \u2713 Successfully added 3 chunks for Apply – Alteration of Vehicle.pdf to Chroma
+2026-02-10 22:16:49,767 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Apply – Alteration of Vehicle.pdf (3 chunks)
+2026-02-10 22:16:49,768 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Apply – Alteration of Vehicle.pdf
+2026-02-10 22:16:49,769 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:16:49,769 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Apply – Alteration of Vehicle.pdf
+2026-02-10 22:17:09,505 - core.vector_store - INFO - \u2713 Added 8 documents to Chroma collection
+2026-02-10 22:17:09,505 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:17:09,505 - core.vector_operations - INFO - \u2713 Successfully added 8 chunks for Apply - Approval of Building_Plan.pdf to Chroma
+2026-02-10 22:17:09,507 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Apply - Approval of Building_Plan.pdf (8 chunks)
+2026-02-10 22:17:09,508 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Apply - Approval of Building_Plan.pdf
+2026-02-10 22:17:09,509 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:17:09,510 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Apply - Approval of Building_Plan.pdf
+2026-02-10 22:17:16,645 - core.vector_store - INFO - \u2713 Added 3 documents to Chroma collection
+2026-02-10 22:17:16,645 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:17:16,645 - core.vector_operations - INFO - \u2713 Successfully added 3 chunks for Apply - Bangla Shasya Bima.pdf to Chroma
+2026-02-10 22:17:16,646 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Apply - Bangla Shasya Bima.pdf (3 chunks)
+2026-02-10 22:17:16,647 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Apply - Bangla Shasya Bima.pdf
+2026-02-10 22:17:16,648 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:17:16,649 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Apply - Bangla Shasya Bima.pdf
+2026-02-10 22:17:26,358 - core.vector_store - INFO - \u2713 Added 4 documents to Chroma collection
+2026-02-10 22:17:26,358 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:17:26,359 - core.vector_operations - INFO - \u2713 Successfully added 4 chunks for Apply - Bhabishyat Credit Card Scheme (WBBCCS).pdf to Chroma
+2026-02-10 22:17:26,360 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Apply - Bhabishyat Credit Card Scheme (WBBCCS).pdf (4 chunks)
+2026-02-10 22:17:26,361 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Apply - Bhabishyat Credit Card Scheme (WBBCCS).pdf
+2026-02-10 22:17:26,362 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:17:26,362 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Apply - Bhabishyat Credit Card Scheme (WBBCCS).pdf
+2026-02-10 22:17:38,908 - core.vector_store - INFO - \u2713 Added 5 documents to Chroma collection
+2026-02-10 22:17:38,908 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:17:38,908 - core.vector_operations - INFO - \u2713 Successfully added 5 chunks for Apply - Change of Address and Hypothecation Addition and Duplicate RC.pdf to Chroma
+2026-02-10 22:17:38,909 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Apply - Change of Address and Hypothecation Addition and Duplicate RC.pdf (5 chunks)
+2026-02-10 22:17:38,910 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Apply - Change of Address and Hypothecation Addition and Duplicate RC.pdf
+2026-02-10 22:17:38,911 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:17:38,913 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Apply - Change of Address and Hypothecation Addition and Duplicate RC.pdf
+2026-02-10 22:17:51,276 - core.vector_store - INFO - \u2713 Added 5 documents to Chroma collection
+2026-02-10 22:17:51,276 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:17:51,276 - core.vector_operations - INFO - \u2713 Successfully added 5 chunks for Apply - Choice Filling of Admission in Government ITI.pdf to Chroma
+2026-02-10 22:17:51,277 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Apply - Choice Filling of Admission in Government ITI.pdf (5 chunks)
+2026-02-10 22:17:51,278 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Apply - Choice Filling of Admission in Government ITI.pdf
+2026-02-10 22:17:51,279 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:17:51,281 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Apply - Choice Filling of Admission in Government ITI.pdf
+2026-02-10 22:17:56,314 - core.vector_store - INFO - \u2713 Added 2 documents to Chroma collection
+2026-02-10 22:17:56,315 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:17:56,315 - core.vector_operations - INFO - \u2713 Successfully added 2 chunks for Apply - Closure of Existing (CE) Application (only for KMC).pdf to Chroma
+2026-02-10 22:17:56,316 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Apply - Closure of Existing (CE) Application (only for KMC).pdf (2 chunks)
+2026-02-10 22:17:56,317 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Apply - Closure of Existing (CE) Application (only for KMC).pdf
+2026-02-10 22:17:56,318 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:17:56,319 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Apply - Closure of Existing (CE) Application (only for KMC).pdf
+2026-02-10 22:18:08,744 - core.vector_store - INFO - \u2713 Added 5 documents to Chroma collection
+2026-02-10 22:18:08,744 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:18:08,744 - core.vector_operations - INFO - \u2713 Successfully added 5 chunks for Apply - Consumer Grievance.pdf to Chroma
+2026-02-10 22:18:08,745 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Apply - Consumer Grievance.pdf (5 chunks)
+2026-02-10 22:18:08,746 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Apply - Consumer Grievance.pdf
+2026-02-10 22:18:08,747 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:18:08,748 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Apply - Consumer Grievance.pdf
+2026-02-10 22:18:18,328 - core.vector_store - INFO - \u2713 Added 4 documents to Chroma collection
+2026-02-10 22:18:18,328 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:18:18,328 - core.vector_operations - INFO - \u2713 Successfully added 4 chunks for Apply - Conversion Application.pdf to Chroma
+2026-02-10 22:18:18,329 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Apply - Conversion Application.pdf (4 chunks)
+2026-02-10 22:18:18,331 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Apply - Conversion Application.pdf
+2026-02-10 22:18:18,332 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:18:18,333 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Apply - Conversion Application.pdf
+2026-02-10 22:19:00,134 - core.vector_store - INFO - \u2713 Added 17 documents to Chroma collection
+2026-02-10 22:19:00,134 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:19:00,134 - core.vector_operations - INFO - \u2713 Successfully added 17 chunks for Apply - Counselling of Choice Filling Up for JEXPO.pdf to Chroma
+2026-02-10 22:19:00,135 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Apply - Counselling of Choice Filling Up for JEXPO.pdf (17 chunks)
+2026-02-10 22:19:00,137 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Apply - Counselling of Choice Filling Up for JEXPO.pdf
+2026-02-10 22:19:00,138 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:19:00,139 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Apply - Counselling of Choice Filling Up for JEXPO.pdf
+2026-02-10 22:19:41,915 - core.vector_store - INFO - \u2713 Added 17 documents to Chroma collection
+2026-02-10 22:19:41,916 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:19:41,916 - core.vector_operations - INFO - \u2713 Successfully added 17 chunks for Apply - Counselling of Choice Filling Up for VOCLET.pdf to Chroma
+2026-02-10 22:19:41,917 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Apply - Counselling of Choice Filling Up for VOCLET.pdf (17 chunks)
+2026-02-10 22:19:41,918 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Apply - Counselling of Choice Filling Up for VOCLET.pdf
+2026-02-10 22:19:41,919 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:19:41,920 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Apply - Counselling of Choice Filling Up for VOCLET.pdf
+2026-02-10 22:19:49,318 - core.vector_store - INFO - \u2713 Added 3 documents to Chroma collection
+2026-02-10 22:19:49,318 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:19:49,319 - core.vector_operations - INFO - \u2713 Successfully added 3 chunks for Apply - Defaulter Renewal Application Demand Printing (CE).pdf to Chroma
+2026-02-10 22:19:49,319 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Apply - Defaulter Renewal Application Demand Printing (CE).pdf (3 chunks)
+2026-02-10 22:19:49,322 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Apply - Defaulter Renewal Application Demand Printing (CE).pdf
+2026-02-10 22:19:49,323 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:19:49,324 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Apply - Defaulter Renewal Application Demand Printing (CE).pdf
+2026-02-10 22:20:07,744 - core.vector_store - INFO - \u2713 Added 7 documents to Chroma collection
+2026-02-10 22:20:07,744 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:20:07,744 - core.vector_operations - INFO - \u2713 Successfully added 7 chunks for Apply - Diploma in Pharmacy.pdf to Chroma
+2026-02-10 22:20:07,745 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Apply - Diploma in Pharmacy.pdf (7 chunks)
+2026-02-10 22:20:07,746 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Apply - Diploma in Pharmacy.pdf
+2026-02-10 22:20:07,748 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:20:07,748 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Apply - Diploma in Pharmacy.pdf
+2026-02-10 22:20:24,653 - core.vector_store - INFO - \u2713 Added 7 documents to Chroma collection
+2026-02-10 22:20:24,653 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:20:24,654 - core.vector_operations - INFO - \u2713 Successfully added 7 chunks for Apply - Disability Certificate.pdf to Chroma
+2026-02-10 22:20:24,654 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Apply - Disability Certificate.pdf (7 chunks)
+2026-02-10 22:20:24,657 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Apply - Disability Certificate.pdf
+2026-02-10 22:20:24,658 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:20:24,658 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Apply - Disability Certificate.pdf
+2026-02-10 22:20:34,607 - core.vector_store - INFO - \u2713 Added 4 documents to Chroma collection
+2026-02-10 22:20:34,607 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:20:34,608 - core.vector_operations - INFO - \u2713 Successfully added 4 chunks for Apply - Download and Print Birth Certificate.pdf to Chroma
+2026-02-10 22:20:34,608 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Apply - Download and Print Birth Certificate.pdf (4 chunks)
+2026-02-10 22:20:34,610 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Apply - Download and Print Birth Certificate.pdf
+2026-02-10 22:20:34,610 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:20:34,612 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Apply - Download and Print Birth Certificate.pdf
+2026-02-10 22:20:42,216 - core.vector_store - INFO - \u2713 Added 3 documents to Chroma collection
+2026-02-10 22:20:42,217 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:20:42,217 - core.vector_operations - INFO - \u2713 Successfully added 3 chunks for Apply - Download and Print Death Certificate.pdf to Chroma
+2026-02-10 22:20:42,218 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Apply - Download and Print Death Certificate.pdf (3 chunks)
+2026-02-10 22:20:42,219 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Apply - Download and Print Death Certificate.pdf
+2026-02-10 22:20:42,220 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:20:42,221 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Apply - Download and Print Death Certificate.pdf
+2026-02-10 22:20:45,051 - core.vector_store - INFO - \u2713 Added 1 documents to Chroma collection
+2026-02-10 22:20:45,051 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:20:45,051 - core.vector_operations - INFO - \u2713 Successfully added 1 chunks for Apply - eKYC Seeding of Aadhaar with Digital Ration Card.pdf to Chroma
+2026-02-10 22:20:45,052 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Apply - eKYC Seeding of Aadhaar with Digital Ration Card.pdf (1 chunks)
+2026-02-10 22:20:45,053 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Apply - eKYC Seeding of Aadhaar with Digital Ration Card.pdf
+2026-02-10 22:20:45,054 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:20:45,054 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Apply - eKYC Seeding of Aadhaar with Digital Ration Card.pdf
+2026-02-10 22:21:16,976 - core.vector_store - INFO - \u2713 Added 12 documents to Chroma collection
+2026-02-10 22:21:16,976 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:21:16,976 - core.vector_operations - INFO - \u2713 Successfully added 12 chunks for Apply - Farm Mechanisation.pdf to Chroma
+2026-02-10 22:21:16,977 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Apply - Farm Mechanisation.pdf (12 chunks)
+2026-02-10 22:21:16,978 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Apply - Farm Mechanisation.pdf
+2026-02-10 22:21:16,979 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:21:16,980 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Apply - Farm Mechanisation.pdf
+2026-02-10 22:21:34,263 - core.vector_store - INFO - \u2713 Added 7 documents to Chroma collection
+2026-02-10 22:21:34,264 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:21:34,264 - core.vector_operations - INFO - \u2713 Successfully added 7 chunks for Apply - Fertilizer License Application.pdf to Chroma
+2026-02-10 22:21:34,265 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Apply - Fertilizer License Application.pdf (7 chunks)
+2026-02-10 22:21:34,266 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Apply - Fertilizer License Application.pdf
+2026-02-10 22:21:34,267 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:21:34,268 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Apply - Fertilizer License Application.pdf
+2026-02-10 22:21:51,249 - core.vector_store - INFO - \u2713 Added 7 documents to Chroma collection
+2026-02-10 22:21:51,250 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:21:51,250 - core.vector_operations - INFO - \u2713 Successfully added 7 chunks for Apply - Grant of Fire License.pdf to Chroma
+2026-02-10 22:21:51,251 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Apply - Grant of Fire License.pdf (7 chunks)
+2026-02-10 22:21:51,252 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Apply - Grant of Fire License.pdf
+2026-02-10 22:21:51,253 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:21:51,255 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Apply - Grant of Fire License.pdf
+2026-02-10 22:21:54,041 - core.vector_store - INFO - \u2713 Added 1 documents to Chroma collection
+2026-02-10 22:21:54,041 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:21:54,042 - core.vector_operations - INFO - \u2713 Successfully added 1 chunks for Apply - Jaago.pdf to Chroma
+2026-02-10 22:21:54,042 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Apply - Jaago.pdf (1 chunks)
+2026-02-10 22:21:54,044 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Apply - Jaago.pdf
+2026-02-10 22:21:54,045 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:21:54,046 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Apply - Jaago.pdf
+2026-02-10 22:22:24,607 - core.vector_store - INFO - \u2713 Added 12 documents to Chroma collection
+2026-02-10 22:22:24,607 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:22:24,607 - core.vector_operations - INFO - \u2713 Successfully added 12 chunks for Apply - Krishak Bandhu Scheme.pdf to Chroma
+2026-02-10 22:22:24,608 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Apply - Krishak Bandhu Scheme.pdf (12 chunks)
+2026-02-10 22:22:24,609 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Apply - Krishak Bandhu Scheme.pdf
+2026-02-10 22:22:24,610 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:22:24,611 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Apply - Krishak Bandhu Scheme.pdf
+2026-02-10 22:22:36,685 - core.vector_store - INFO - \u2713 Added 5 documents to Chroma collection
+2026-02-10 22:22:36,686 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:22:36,686 - core.vector_operations - INFO - \u2713 Successfully added 5 chunks for Apply - Land Revenue (Khajna).pdf to Chroma
+2026-02-10 22:22:36,687 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Apply - Land Revenue (Khajna).pdf (5 chunks)
+2026-02-10 22:22:36,689 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Apply - Land Revenue (Khajna).pdf
+2026-02-10 22:22:36,691 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:22:36,691 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Apply - Land Revenue (Khajna).pdf
+2026-02-10 22:23:25,080 - core.vector_store - INFO - \u2713 Added 19 documents to Chroma collection
+2026-02-10 22:23:25,081 - core.vector_store - WARNING - Could not explicitly persist Chroma (may persist automatically): 'Client' object has no attribute 'persist'
+2026-02-10 22:23:25,081 - core.vector_operations - INFO - \u2713 Successfully added 19 chunks for Apply - License for e-Parimap.pdf to Chroma
+2026-02-10 22:23:25,082 - ui.pages.vector_operations - INFO - \u2705 Successfully added to Chroma: Apply - License for e-Parimap.pdf (19 chunks)
+2026-02-10 22:23:25,084 - ui.pages.vector_operations - INFO - \u2705 Document metadata saved to MongoDB: Apply - License for e-Parimap.pdf
+2026-02-10 22:23:25,084 - ui.pages.vector_operations - INFO - \u2705 Service status updated to Active: test \u2192 test s
+2026-02-10 22:23:25,085 - ui.pages.vector_operations - INFO - \u2705 Upload action logged: Apply - License for e-Parimap.pdf
+2026-02-10 22:38:56,791 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-10 22:41:53,625 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-10 22:42:17,046 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-10 22:42:21,715 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-10 22:42:21,805 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-10 22:42:47,541 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-10 22:42:47,560 - services.chat_service - INFO - Saved message to chat bc3ec890-3a76-4fbd-82b4-4248331a78ea
+2026-02-10 22:42:47,561 - core.rag_engine - INFO - Processing query for chat bc3ec890-3a76-4fbd-82b4-4248331a78ea: kanyashree prakalpa benifits
+2026-02-10 22:43:06,236 - core.rag_engine - INFO - Processing 6 retrieved documents for chat bc3ec890-3a76-4fbd-82b4-4248331a78ea
+2026-02-10 22:44:41,619 - core.rag_engine - INFO - Query processed successfully in 114.06s with 1 chunks
+2026-02-10 22:44:41,620 - core.rag_engine - WARNING - Failed to estimate token usage: Could not import transformers python package. This is needed in order to calculate get_token_ids. Please install it with `pip install transformers`.
+2026-02-10 22:44:41,633 - services.chat_service - INFO - Saved message to chat bc3ec890-3a76-4fbd-82b4-4248331a78ea
+2026-02-10 22:44:41,633 - ui.components.chat_interface - INFO - Saved assistant response to chat bc3ec890-3a76-4fbd-82b4-4248331a78ea
+2026-02-10 22:44:41,728 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-10 22:46:38,172 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-10 22:46:38,188 - services.chat_service - INFO - Saved message to chat bc3ec890-3a76-4fbd-82b4-4248331a78ea
+2026-02-10 22:46:38,190 - core.rag_engine - INFO - Processing query for chat bc3ec890-3a76-4fbd-82b4-4248331a78ea: eligibility and documents needed for income certificate
+2026-02-10 22:46:52,790 - core.rag_engine - INFO - Processing 6 retrieved documents for chat bc3ec890-3a76-4fbd-82b4-4248331a78ea
+2026-02-10 22:48:43,595 - core.rag_engine - INFO - Query processed successfully in 125.40s with 1 chunks
+2026-02-10 22:48:43,596 - core.rag_engine - WARNING - Failed to estimate token usage: Could not import transformers python package. This is needed in order to calculate get_token_ids. Please install it with `pip install transformers`.
+2026-02-10 22:48:43,598 - services.chat_service - INFO - Saved message to chat bc3ec890-3a76-4fbd-82b4-4248331a78ea
+2026-02-10 22:48:43,598 - ui.components.chat_interface - INFO - Saved assistant response to chat bc3ec890-3a76-4fbd-82b4-4248331a78ea
+2026-02-10 22:48:43,686 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-10 22:56:18,802 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-10 22:56:18,825 - services.chat_service - INFO - Saved message to chat bc3ec890-3a76-4fbd-82b4-4248331a78ea
+2026-02-10 22:56:18,827 - core.rag_engine - INFO - Processing query for chat bc3ec890-3a76-4fbd-82b4-4248331a78ea:  eKYC Seeding of Aadhaar with Digital Ration Card
+2026-02-10 22:56:47,148 - core.rag_engine - INFO - Processing 6 retrieved documents for chat bc3ec890-3a76-4fbd-82b4-4248331a78ea
+2026-02-10 22:59:03,196 - core.rag_engine - INFO - Query processed successfully in 164.37s with 1 chunks
+2026-02-10 22:59:03,198 - core.rag_engine - WARNING - Failed to estimate token usage: Could not import transformers python package. This is needed in order to calculate get_token_ids. Please install it with `pip install transformers`.
+2026-02-10 22:59:03,201 - services.chat_service - INFO - Saved message to chat bc3ec890-3a76-4fbd-82b4-4248331a78ea
+2026-02-10 22:59:03,201 - ui.components.chat_interface - INFO - Saved assistant response to chat bc3ec890-3a76-4fbd-82b4-4248331a78ea
+2026-02-10 22:59:03,316 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-10 23:04:08,812 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-10 23:04:08,829 - services.chat_service - INFO - Saved message to chat bc3ec890-3a76-4fbd-82b4-4248331a78ea
+2026-02-10 23:04:08,830 - core.rag_engine - INFO - Processing query for chat bc3ec890-3a76-4fbd-82b4-4248331a78ea:  
+2026-02-10 23:04:08,830 - core.rag_engine - WARNING - Invalid query: Empty query
+2026-02-10 23:04:08,833 - services.chat_service - INFO - Saved message to chat bc3ec890-3a76-4fbd-82b4-4248331a78ea
+2026-02-10 23:04:08,833 - ui.components.chat_interface - INFO - Saved assistant response to chat bc3ec890-3a76-4fbd-82b4-4248331a78ea
+2026-02-10 23:04:08,910 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-10 23:04:16,213 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
+2026-02-10 23:04:16,233 - services.chat_service - INFO - Saved message to chat bc3ec890-3a76-4fbd-82b4-4248331a78ea
+2026-02-10 23:04:16,235 - core.rag_engine - INFO - Processing query for chat bc3ec890-3a76-4fbd-82b4-4248331a78ea: -
+2026-02-10 23:04:49,807 - core.rag_engine - INFO - Processing 6 retrieved documents for chat bc3ec890-3a76-4fbd-82b4-4248331a78ea
+2026-02-10 23:07:05,165 - core.rag_engine - INFO - Query processed successfully in 168.93s with 1 chunks
+2026-02-10 23:07:05,166 - core.rag_engine - WARNING - Failed to estimate token usage: Could not import transformers python package. This is needed in order to calculate get_token_ids. Please install it with `pip install transformers`.
+2026-02-10 23:07:05,170 - services.chat_service - INFO - Saved message to chat bc3ec890-3a76-4fbd-82b4-4248331a78ea
+2026-02-10 23:07:05,170 - ui.components.chat_interface - INFO - Saved assistant response to chat bc3ec890-3a76-4fbd-82b4-4248331a78ea
+2026-02-10 23:07:05,312 - ui.pages.chatbot - INFO - Session state initialized for enhanced chat system.
