@@ -19,25 +19,6 @@ services:
     networks:
       - bsk-network
 
-  # Ollama for LLM and embeddings
-  ollama:
-    image: ollama/ollama:latest
-    container_name: bsk-ollama
-    ports:
-      - "192.168.97.78:11434:11434"
-    volumes:
-      - ollama_data:/root/.ollama
-    environment:
-      # GPU acceleration - set to 0 to disable
-      OLLAMA_NUM_GPU: 1
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:11434/api/tags"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-    networks:
-      - bsk-network
-
   # BSK Assistant Application
   app:
     build:
@@ -45,27 +26,25 @@ services:
       dockerfile: Dockerfile
     container_name: bsk-app
     ports:
-      - "192.168.97.78:8000:8000"  # FastAPI
+      - "192.168.97.78:8001:8000"  # FastAPI
     depends_on:
       mongodb:
-        condition: service_healthy
-      ollama:
         condition: service_healthy
     environment:
       # MongoDB Configuration
       MONGODB_URI: mongodb://192.168.97.78:27017
       MONGO_DB_NAME: bsk_assistant
-      
-      # Ollama Configuration
+
+      # Ollama Configuration (running on host VPS, not in Docker)
       OLLAMA_BASE_URL: http://192.168.97.78:11434
-      
+
       # Chroma Vector Store (embedded, local)
       CHROMA_PERSIST_DIRECTORY: /app/db/chroma
-      
+
       # Application Settings
       ENVIRONMENT: production
       DEBUG: "False"
-      
+
       # Chunk Configuration
       CHUNK_SIZE: "1000"
       CHUNK_OVERLAP: "350"
@@ -80,8 +59,6 @@ services:
 volumes:
   bsk_mongodb_data:
     driver: local
-  ollama_data:
-    driver: local
   bsk_app_data:
     driver: local
   bsk_app_logs:
@@ -90,4 +67,3 @@ volumes:
 networks:
   bsk-network:
     driver: bridge
-
