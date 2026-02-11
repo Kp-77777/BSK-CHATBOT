@@ -1,0 +1,92 @@
+version: '3.8'
+
+services:
+  # MongoDB for document and log storage
+  mongodb:
+    image: mongo:7
+    container_name: bsk-mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - bsk_mongodb_data:/data/db
+    environment:
+      MONGO_INITDB_DATABASE: bsk_assistant
+    healthcheck:
+      test: mongosh --eval 'db.adminCommand("ping")'
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - bsk-network
+
+  # Ollama for LLM and embeddings
+  ollama:
+    image: ollama/ollama:latest
+    container_name: bsk-ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    environment:
+      # GPU acceleration - set to 0 to disable
+      OLLAMA_NUM_GPU: 1
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:11434/api/tags"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - bsk-network
+
+  # BSK Assistant Application
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: bsk-app
+    ports:
+      - "8000:8000"  # FastAPI
+    depends_on:
+      mongodb:
+        condition: service_healthy
+      ollama:
+        condition: service_healthy
+    environment:
+      # MongoDB Configuration
+      MONGODB_URI: mongodb://mongodb:27017
+      MONGO_DB_NAME: bsk_assistant
+      
+      # Ollama Configuration
+      OLLAMA_BASE_URL: http://ollama:11434
+      
+      # Chroma Vector Store (embedded, local)
+      CHROMA_PERSIST_DIRECTORY: /app/db/chroma
+      
+      # Application Settings
+      ENVIRONMENT: production
+      DEBUG: "False"
+      
+      # Chunk Configuration
+      CHUNK_SIZE: "1000"
+      CHUNK_OVERLAP: "350"
+    volumes:
+      # Persist Chroma and logs
+      - bsk_app_data:/app/db/chroma
+      - bsk_app_logs:/app/logs
+    networks:
+      - bsk-network
+    restart: unless-stopped
+
+volumes:
+  bsk_mongodb_data:
+    driver: local
+  ollama_data:
+    driver: local
+  bsk_app_data:
+    driver: local
+  bsk_app_logs:
+    driver: local
+
+networks:
+  bsk-network:
+    driver: bridge

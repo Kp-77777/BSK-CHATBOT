@@ -1,0 +1,69 @@
+BSK API - Important Commands (Quick Reference)
+
+Build / Export / Import
+1) Build image (project root):
+   docker build -t bsk-chatapi2 .
+
+2) Save image to tar:
+   docker save bsk-chatapi2 -o bsk-chatapi2.tar
+
+3) Load image from tar:
+   docker load -i bsk-chatapi2.tar
+
+Run / Stop / Logs
+4) Run container (API only, example port 9001):
+   docker run -d --name bsk-chatapi2 ^
+     -p 9001:8000 ^
+     --env-file D:\bsk\.env ^
+     -v D:\bsk\chroma:/app/db/chroma ^
+     -v D:\bsk\logs:/app/logs ^
+     bsk-chatapi2
+
+5) List containers:
+   docker ps
+
+6) View logs:
+   docker logs -f bsk-chatapi2
+
+7) Stop container:
+   docker stop bsk-chatapi2
+
+8) Remove container:
+   docker rm bsk-chatapi2
+
+Chroma / Health / Prompt
+9) Check Chroma init/stats (host):
+   python scripts/initialize_chroma.py
+   python chroma_stats.py
+
+10) Check Chroma init/stats (inside Docker):
+   docker exec -it bsk-chatapi2 python scripts/initialize_chroma.py
+   docker exec -it bsk-chatapi2 python chroma_stats.py
+
+11) Check final prompt (host):
+   python checkprompt.py "your query here"
+
+12) Check final prompt (inside Docker):
+   docker exec -it bsk-chatapi2 python checkprompt.py "your query here"
+
+API / Swagger
+13) API health:
+   http://localhost:8000/
+
+14) Swagger UI:
+   http://localhost:8000/docs
+
+Connectivity Checks (inside Docker)
+15) Check MongoDB:
+   docker exec -it bsk-chatapi2 python - <<'PY'
+from db.mongo_client import get_mongo_client
+get_mongo_client().server_info()
+print("MongoDB OK")
+PY
+
+
+Notes
+- If API runs in Docker and Ollama/Mongo are on the host, use:
+  OLLAMA_BASE_URL=http://host.docker.internal:11434
+  MONGODB_URI=mongodb://host.docker.internal:27017
+- If API runs on host (not Docker), use localhost.
