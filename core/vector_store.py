@@ -5,7 +5,7 @@ import os
 from typing import List, Dict, Optional
 import chromadb
 from models.embeddings import get_embeddings
-from config.settings import VECTOR_STORE_CONFIG
+from config.settings import VECTOR_STORE_CONFIG, MODEL_CONFIG, EMBEDDING_MODEL
 from utils.logger import get_logger
 
 logger = get_logger(__name__)
@@ -13,8 +13,10 @@ logger = get_logger(__name__)
 
 class OllamaEmbeddingFunction:
     """Chroma embedding function wrapper for Ollama embeddings."""
-    def __init__(self, embeddings):
+    def __init__(self, embeddings, model_name: Optional[str] = None):
         self.embeddings = embeddings
+        # Keep default aligned with settings.py, but allow override when needed.
+        self.model_name = model_name or MODEL_CONFIG.get("embedding_model", EMBEDDING_MODEL)
 
     def __call__(self, input):
         # Chroma expects parameter name "input"
@@ -23,7 +25,7 @@ class OllamaEmbeddingFunction:
 
     def name(self):
         # Chroma expects embedding_function.name() callable
-        return "mxbai-embed-large:latest"
+        return self.model_name
 
 
 class ChromaVectorStore:
@@ -31,7 +33,8 @@ class ChromaVectorStore:
     
     def __init__(self):
         self.embeddings = get_embeddings()
-        self.embedding_function = OllamaEmbeddingFunction(self.embeddings)
+        embedding_model = MODEL_CONFIG.get("embedding_model", EMBEDDING_MODEL)
+        self.embedding_function = OllamaEmbeddingFunction(self.embeddings, model_name=embedding_model)
         self.client = None
         self.collection = None
         self.persist_directory = VECTOR_STORE_CONFIG.get("persist_directory", "./db/chroma")
