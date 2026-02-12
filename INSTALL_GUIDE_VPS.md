@@ -1,74 +1,53 @@
-# BSK API Installation Guide (Docker Image Tar)
+# BSK API Installation Guide (Linux VPS)
 
-This guide assumes you already built the Docker image on your laptop and have a `bsk-chatapi.tar` file. Your VPS is **Linux-based**.
+This guide is aligned with your current `docker-compose.yml`:
+- `app` container (FastAPI) on host port `8001`
+- `mongodb` container in compose
+- Ollama is pre-installed and running on the VPS host (not in compose)
 
-Choose **one** of the two deployment methods:
-- **A) Direct Docker run** (most common)
-- **B) Docker Compose** (runs app + optional MongoDB/Ollama containers)
+Choose one deployment path:
+- **A) Tar file + direct Docker run**
+- **B) Git pull on VPS + Docker Compose up**
 
 ---
 
-## A) Direct Docker Run (Recommended for external MongoDB/Ollama)
+## A) Tar File + Direct Docker Run
 
-### 1) Prerequisites on the VPS
+### 1) Prerequisites
 - Docker installed and running
-- Network access to MongoDB
-- Open firewall for the port you will expose (example: 9001)
-
-### 2) Ollama location (choose one)
-**A. Ollama on the same VPS host**
-- Install Ollama and start the service.
-  ```
-  curl -fsSL https://ollama.com/install.sh | sh
-  ```
-  Start Ollama (if not already running):
-  ```
-  ollama serve
-  ```
-- Pull models:
+- Ollama installed on VPS host
+- Models pulled on host:
 ```
 ollama pull llama3.1:latest
 ollama pull mxbai-embed-large:latest
 ```
-Verify:
-```
-ollama list
-```
 
-**B. Ollama on a different server**
-- Ensure the VPS can reach it (firewall, routing).
-- You will set `OLLAMA_BASE_URL` to that server’s IP.
-
-### 3) Transfer the image to the VPS
+### 2) Transfer and load image
+From local machine:
 ```
 scp bsk-chatapi.tar user@VPS_IP:/home/user/
 ```
-
-### 4) Load the image on the VPS
+On VPS:
 ```
 docker load -i /home/user/bsk-chatapi.tar
-```
-Verify:
-```
 docker images | grep bsk-chatapi
 ```
 
-### 5) Create project directories on the VPS
+### 3) Create runtime folders
 ```
 sudo mkdir -p /opt/bsk/chroma /opt/bsk/logs
 sudo chown -R $USER:$USER /opt/bsk
 ```
 
-### 6) Create the `.env` file on the VPS
-Create `/opt/bsk/.env` with correct values.
-
-**If MongoDB and Ollama are on the VPS host:**
+### 4) Create `.env`
 ```
-MONGODB_URI=mongodb://VPS_IP:27017
+nano /opt/bsk/.env
+```
+Use:
+```
+MONGODB_URI=mongodb://<MONGO_HOST>:27017
 MONGO_DB_NAME=bsk_assistant
-
-OLLAMA_BASE_URL=http://VPS_IP:11434
-
+OLLAMA_BASE_URL=http://<VPS_HOST_IP>:11434
 CHROMA_PERSIST_DIRECTORY=./db/chroma
 ENVIRONMENT=production
 LOG_LEVEL=INFO
@@ -76,20 +55,7 @@ CHUNK_SIZE=1000
 CHUNK_OVERLAP=350
 ```
 
-**If MongoDB or Ollama are on another server:**
-- Replace `VPS_IP` with the external server IP/hostname.
-
-### 6.1) Edit the `.env` file
-Open and edit values:
-```
-nano /opt/bsk/.env
-```
-Save and exit:
-- Press `CTRL+O`, then `Enter`
-- Press `CTRL+X`
-
-### 7) Run the container (API only)
-Example using host port **9001** (container listens on 8000):
+### 5) Run API container
 ```
 docker run -d --name bsk-chatapi \
   -p 9001:8000 \
@@ -99,107 +65,131 @@ docker run -d --name bsk-chatapi \
   bsk-chatapi
 ```
 
-### 8) Test
+### 6) Test
 ```
 curl http://VPS_IP:9001/
 ```
-Swagger UI:
+Swagger:
 ```
 http://VPS_IP:9001/docs
 ```
 
 ---
 
-## B) Docker Compose (Runs app + MongoDB + Ollama containers)
+## B) Git Pull on VPS + Docker Compose Up
 
-Use this only if you want MongoDB + Ollama **containerized** on the VPS.
+This path uses your current compose architecture:
+- MongoDB in compose
+- App in compose
+- Ollama on VPS host
 
 ### 1) Prerequisites
-- Docker and Docker Compose installed
-- Ports 8000, 27017, 11434 available (or change host ports)
+- Docker + Docker Compose installed
+- Git installed
+- Ollama installed on VPS host and running
 
-### 2) Update docker-compose.yml
-- Keep only API port (remove 8501)
-- Keep `MONGODB_URI: mongodb://mongodb:27017`
-- Keep `OLLAMA_BASE_URL: http://ollama:11434`
-- Ensure volumes for `/app/db/chroma` and `/app/logs`
-
-### 3) Bring it up
+Install Ollama if needed:
 ```
-docker compose up -d
+curl -fsSL https://ollama.com/install.sh | sh
 ```
-
-### 4) Pull Ollama models inside the Ollama container
+Start:
 ```
-docker exec -it bsk-ollama ollama pull llama3.1:latest
-docker exec -it bsk-ollama ollama pull mxbai-embed-large:latest
+ollama serve
+```
+Pull models:
+```
+ollama pull llama3.1:latest
+ollama pull mxbai-embed-large:latest
 ```
 
-### 5) Test
+### 2) Clone or pull repository
+First time:
 ```
-curl http://VPS_IP:8000/
+cd /opt
+git clone <YOUR_REPO_URL> bsk
+cd /opt/bsk
+```
+Existing repo:
+```
+cd /opt/bsk
+git pull origin <YOUR_BRANCH>
+```
+
+### 3) Update compose for host Ollama URL
+Edit:
+```
+nano /opt/bsk/docker-compose.yml
+```
+Set:
+```
+OLLAMA_BASE_URL: http://<VPS_HOST_IP>:11434
+```
+
+Also ensure:
+```
+MONGODB_URI: mongodb://mongodb:27017
+```
+
+### 4) Start with compose
+```
+cd /opt/bsk
+docker compose up -d --build
+```
+
+### 5) Verify services
+```
+docker compose ps
+docker logs -f bsk-app
+```
+
+### 6) Test API
+```
+curl http://VPS_IP:8001/
+```
+Swagger:
+```
+http://VPS_IP:8001/docs
+```
+
+### 7) Update after new commits
+```
+cd /opt/bsk
+git pull origin <YOUR_BRANCH>
+docker compose up -d --build
 ```
 
 ---
 
-## Common Issues and Fixes
+## Troubleshooting
 
 ### Port conflict
-If you see “bind: address already in use”, choose another host port:
+If `8001` is in use, change host port mapping in compose from:
 ```
-docker run -d --name bsk-chatapi \
-  -p 9010:8000 \
-  --env-file /opt/bsk/.env \
-  -v /opt/bsk/chroma:/app/db/chroma \
-  -v /opt/bsk/logs:/app/logs \
-  bsk-chatapi
+8001:8000
+```
+to another port (for example `9010:8000`) and restart compose.
+
+### Ollama unreachable from container
+- Do not use `localhost` in compose env for Ollama.
+- Use host IP:
+```
+OLLAMA_BASE_URL=http://<VPS_HOST_IP>:11434
+```
+- Confirm from host:
+```
+curl http://localhost:11434/api/tags
 ```
 
-### MongoDB or Ollama unreachable
-Symptoms:
-- “Cannot connect to Ollama…”
-- “MongoDB connection failed…”
-
-Fix:
-- Ensure services are running.
-- Ensure firewall allows access.
-- Use correct IPs in `.env`. Do NOT use `localhost` unless the service is in the same container.
-
-### Persisted data missing after restart
-Ensure you used volume mounts:
+### MongoDB unreachable in compose
+Ensure app env uses compose service name:
 ```
--v /opt/bsk/chroma:/app/db/chroma
--v /opt/bsk/logs:/app/logs
+MONGODB_URI=mongodb://mongodb:27017
 ```
 
-### View logs
-```
-docker logs -f bsk-chatapi
-```
+### Persisted data check
+MongoDB data:
+- volume `bsk_mongodb_data`
 
----
+Chroma and logs:
+- volumes mapped in app service (`/app/db/chroma`, `/app/logs`)
 
-## Stop / Remove / Update
-
-Stop:
-```
-docker stop bsk-chatapi
-```
-
-Remove:
-```
-docker rm bsk-chatapi
-```
-
-Update with a new tar:
-```
-docker stop bsk-chatapi
-docker rm bsk-chatapi
-docker load -i /home/user/new-bsk-chatapi.tar
-docker run -d --name bsk-chatapi \
-  -p 9001:8000 \
-  --env-file /opt/bsk/.env \
-  -v /opt/bsk/chroma:/app/db/chroma \
-  -v /opt/bsk/logs:/app/logs \
-  bsk-chatapi
-```
